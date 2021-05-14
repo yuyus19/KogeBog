@@ -1,4 +1,4 @@
-package com.example.dicerally
+package com.example.kogebog
 
 import org.junit.Test
 

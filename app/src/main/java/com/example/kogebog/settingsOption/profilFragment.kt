@@ -1,4 +1,4 @@
-package com.example.dicerally.settingsOption
+package com.example.kogebog.settingsOption
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

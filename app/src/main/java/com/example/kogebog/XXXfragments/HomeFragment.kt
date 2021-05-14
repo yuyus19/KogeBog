@@ -1,4 +1,4 @@
-package com.example.dicerally.XXXfragments
+package com.example.kogebog.XXXfragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentHomeBinding
-import com.example.dicerally.homeOption.RecipeFragment
+import com.example.kogebog.homeOption.RecipeFragment
 
 
 class HomeFragment : Fragment() {

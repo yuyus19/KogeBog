@@ -1,4 +1,4 @@
-package com.example.dicerally.favouriteOption
+package com.example.kogebog.favouriteOption
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

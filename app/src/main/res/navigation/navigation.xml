@@ -6,7 +6,7 @@
     app:startDestination="@id/recipeFragment3">
     <fragment
         android:id="@+id/recipeFragment3"
-        android:name="com.example.dicerally.homeOption.RecipeFragment"
+        android:name="com.example.kogebog.homeOption.RecipeFragment"
         android:label="fragment_recipe"
         tools:layout="@layout/fragment_recipe" >
         <action
