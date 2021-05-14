@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/recipeFragment3">
+    <fragment
+        android:id="@+id/recipeFragment3"
+        android:name="com.example.dicerally.homeOption.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" >
+        <action
+            android:id="@+id/action_recipeFragment3_to_startermealFragment2"
+            app:destination="@id/startermealFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/startermealFragment2"
+        android:name="com.example.dicerally.homeOption.startermealFragment"
+        android:label="fragment_startermeal"
+        tools:layout="@layout/fragment_startermeal" />
+</navigation>
