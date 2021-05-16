@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.slidingpanelayout.widget.SlidingPaneLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,16 +8,14 @@
     tools:context="com.example.kogebog.homeOption.HovedretFragment">
 
     <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    android:id="@+id/list_pane"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="69dp"
-        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="2dp">
 
             <Button
                 android:id="@+id/button1"
@@ -56,38 +55,16 @@
                 android:layout_height="73dp"
                 android:text="Button" />
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button11"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
-
         </LinearLayout>
-    </ScrollView>
+
+<LinearLayout
+    android:id="@+id/detail_container"
+    android:layout_width="300dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+
+    android:name="com.example.SelectAnItemFragment"
+    android:orientation="horizontal">
 
     <ScrollView
         android:layout_width="345dp"
@@ -124,5 +101,5 @@
                 android:layout_marginTop="20dp" />
         </LinearLayout>
     </ScrollView>
-
-</RelativeLayout>
+</LinearLayout>
+</androidx.slidingpanelayout.widget.SlidingPaneLayout>
