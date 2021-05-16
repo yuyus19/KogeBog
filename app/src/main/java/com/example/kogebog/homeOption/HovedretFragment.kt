@@ -49,6 +49,8 @@ class HovedretFragment : Fragment() {
         }
 
         binding.button3.setOnClickListener{
+            val getta=Indhold
+            binding.titelOpskrift.setText(getta.Articles?.get(0))
 
 
         }
