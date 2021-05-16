@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentHovedretBinding
-import com.example.dicerally.databinding.FragmentRecipeBinding
 
 
 class HovedretFragment : Fragment() {
@@ -60,8 +59,8 @@ class HovedretFragment : Fragment() {
         }
 
         binding.button3.setOnClickListener{
-            val getta=Indhold
-            binding.titelOpskrift.setText(getta.Articles?.get(0))
+            val getta=IndholdHovedret
+            binding.titelOpskrift.setText(getta.ingredients?.get(0))
 
 
         }
