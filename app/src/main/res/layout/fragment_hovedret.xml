@@ -70,10 +70,10 @@
 
 <LinearLayout
     android:id="@+id/detail_container"
-    android:layout_width="300dp"
+    android:layout_width="match_parent"
     android:layout_weight="1"
     android:layout_height="match_parent"
-
+    android:layout_margin="20dp"
     android:name="com.example.SelectAnItemFragment"
     android:orientation="horizontal">
 
@@ -84,7 +84,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -96,19 +96,34 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textSize="35dp"
+                android:layout_alignParentTop="true"
+
                 />
 
             <TextView
                 android:id="@+id/ingredients_opskrift"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titel_opskrift"/>
 
             <TextView
                 android:id="@+id/manual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
-        </LinearLayout>
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/ingredients_opskrift"/>
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/cardview_light_background"
+                android:src="@drawable/favorite_size40dp">
+
+
+            </ImageButton>
+        </RelativeLayout>
     </ScrollView>
 </LinearLayout>
 </androidx.slidingpanelayout.widget.SlidingPaneLayout>
