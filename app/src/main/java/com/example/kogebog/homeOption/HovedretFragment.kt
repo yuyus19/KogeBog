@@ -48,6 +48,11 @@ class HovedretFragment : Fragment() {
             binding.manual.setText(array[2])
         }
 
+        binding.button3.setOnClickListener{
+
+
+        }
+
 
 
 
