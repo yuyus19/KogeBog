@@ -12,8 +12,6 @@ import com.example.dicerally.databinding.FragmentRecipeBinding
 
 class HovedretFragment : Fragment() {
 
-
-
     private var _binding: FragmentHovedretBinding?=null
     // This property is only valid between onCreateView and
 // onDestroyView.
@@ -37,8 +35,6 @@ class HovedretFragment : Fragment() {
             binding.titelOpskrift.setText(array[0])
             binding.ingredientsOpskrift.setText(array[1])
             binding.manual.setText(array[2])
-
-
 
         }
         binding.button2.setOnClickListener {
