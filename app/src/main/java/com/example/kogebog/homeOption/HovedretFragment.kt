@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentHovedretBinding
 import com.example.dicerally.databinding.FragmentRecipeBinding
@@ -28,6 +29,10 @@ class HovedretFragment : Fragment() {
         binding.titelOpskrift.setText(array[0])
         binding.ingredientsOpskrift.setText(array[1])
         binding.manual.setText(array[2])
+        val imageURL = "https://vielskermad.dk/wp-content/uploads/2020/11/lasagne-1200x900.jpg"
+        Glide.with(this)
+            .load(imageURL)
+            .into(binding.mainCorse1Image)
 
 
         binding.button1.setOnClickListener {
@@ -35,13 +40,23 @@ class HovedretFragment : Fragment() {
             binding.titelOpskrift.setText(array[0])
             binding.ingredientsOpskrift.setText(array[1])
             binding.manual.setText(array[2])
+            val imageURL = "https://vielskermad.dk/wp-content/uploads/2020/11/lasagne-1200x900.jpg"
 
+            Glide.with(this)
+                .load(imageURL)
+                .into(binding.mainCorse1Image)
         }
         binding.button2.setOnClickListener {
             val array = resources.getStringArray(R.array.Spaghetti)
             binding.titelOpskrift.setText(array[0])
             binding.ingredientsOpskrift.setText(array[1])
             binding.manual.setText(array[2])
+
+            val imageURL = "https://www.valdemarsro.dk/wp-content/2015/09/bolognese.jpg"
+
+            Glide.with(this)
+                .load(imageURL).centerCrop()
+                .into(binding.mainCorse1Image)
         }
 
         binding.button3.setOnClickListener{
@@ -50,9 +65,6 @@ class HovedretFragment : Fragment() {
 
 
         }
-
-
-
 
 
         val view = binding.root
