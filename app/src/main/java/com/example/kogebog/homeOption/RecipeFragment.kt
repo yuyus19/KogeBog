@@ -34,7 +34,7 @@ private var _binding:FragmentRecipeBinding?=null
             var tx = fManager.beginTransaction()
 
 
-            tx.replace(R.id.fl_wrapper, forret())
+            tx.replace(R.id.fl_wrapper, ForretFragment())
             tx.addToBackStack(null)
             tx.commit()
 

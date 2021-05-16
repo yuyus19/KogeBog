@@ -1,17 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.slidingpanelayout.widget.SlidingPaneLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.kogebog.homeOption.forret">
+    tools:context="com.example.kogebog.homeOption.ForretFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/list_pane"
+        android:layout_width="140dp"
         android:layout_height="match_parent"
-        android:text="ForretFragment" />
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/lightgrey">
 
 
 
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:text="@string/lasagne" />
 
-</FrameLayout>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:text="SPAGHETTI bolognese"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:text="indsæt Ret3"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:text="indsæt Ret4"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:text="indsæt Ret5"/>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:singleLine="false"
+            android:textSize="14sp"
+            android:text="indsæt Ret6"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detail_container"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:name="com.example.SelectAnItemFragment"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="345dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:id="@+id/titel_opskrift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="35dp"
+                    android:layout_alignParentTop="true"
+
+                    />
+                <ImageView
+                    android:id="@+id/mainCorse1Image"
+                    android:layout_width="200dp"
+                    android:layout_height="90dp"
+                    android:layout_below="@+id/titel_opskrift"
+                    android:layout_centerHorizontal="true"
+                    />
+                <TextView
+                    android:id="@+id/ingredients_opskrift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mainCorse1Image"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="7dp" />
+
+                <TextView
+                    android:id="@+id/manual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/ingredients_opskrift"/>
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/cardview_light_background"
+                    android:src="@drawable/favorite_size40dp">
+
+
+                </ImageButton>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.slidingpanelayout.widget.SlidingPaneLayout>
