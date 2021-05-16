@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,7 +22,9 @@
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="73dp"
-                android:text="Button" />
+                android:singleLine="false"
+                android:text="Lasagne"
+                android:textSize="10sp" />
 
             <Button
                 android:id="@+id/button2"
@@ -89,7 +92,12 @@
     <ScrollView
         android:layout_width="345dp"
         android:layout_height="match_parent"
-        android:layout_gravity="right">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="-1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,22 +110,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="TextView"
                 android:textSize="35dp" />
 
             <TextView
                 android:id="@+id/ingredients_opskrift"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ingredients" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/manual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="TextView" />
+                android:layout_marginTop="20dp" />
         </LinearLayout>
     </ScrollView>
 
-</FrameLayout>
+</RelativeLayout>
