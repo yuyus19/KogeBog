@@ -26,6 +26,11 @@ class HovedretFragment : Fragment() {
     ): View? {
         _binding = FragmentHovedretBinding.inflate(inflater, container, false)
 
+        val array=resources.getStringArray(R.array.Lasagne)
+        binding.titelOpskrift.setText(array[0])
+        binding.ingredientsOpskrift.setText(array[1])
+        binding.manual.setText(array[2])
+
 
         binding.button1.setOnClickListener {
          val array = resources.getStringArray(R.array.Lasagne)

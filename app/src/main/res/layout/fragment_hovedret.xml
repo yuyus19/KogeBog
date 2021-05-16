@@ -10,50 +10,61 @@
     <!-- TODO: Update blank fragment layout -->
 <LinearLayout
     android:id="@+id/list_pane"
-    android:layout_width="280dp"
+    android:layout_width="140dp"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/lightgrey">
 
 
 
             <Button
                 android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
                 android:singleLine="false"
-                android:text="Lasagne"
-                android:textSize="10sp" />
+                android:textSize="14sp"
+                android:text="@string/lasagne" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:singleLine="false"
+                android:textSize="14sp"
+                android:text="SPAGHETTI bolognese"/>
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:singleLine="false"
+                android:textSize="14sp"
+                android:text="indsæt Ret3"/>
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:singleLine="false"
+                android:textSize="14sp"
+                android:text="indsæt Ret4"/>
 
             <Button
                 android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:singleLine="false"
+                android:textSize="14sp"
+                android:text="indsæt Ret5"/>
 
             <Button
                 android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="73dp"
-                android:text="Button" />
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:singleLine="false"
+                android:textSize="14sp"
+                android:text="indsæt Ret6"/>
 
         </LinearLayout>
 
@@ -71,10 +82,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="-1dp">
+        android:layout_alignParentEnd="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,7 +95,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:textSize="35dp" />
+                android:textSize="35dp"
+                />
 
             <TextView
                 android:id="@+id/ingredients_opskrift"
