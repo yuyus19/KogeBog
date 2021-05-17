@@ -24,10 +24,10 @@ class HovedretFragment : Fragment() {
     ): View? {
         _binding = FragmentHovedretBinding.inflate(inflater, container, false)
 
-        val array=resources.getStringArray(R.array.Lasagne)
-        binding.titelOpskrift.setText(array[0])
-        binding.ingredientsOpskrift.setText(array[1])
-        binding.manual.setText(array[2])
+        val indhold=IndholdHovedret
+        binding.titelOpskrift.setText(indhold.title?.get(0))
+        binding.ingredientsOpskrift.setText(indhold.ingredients?.get(0))
+        binding.manual.setText(indhold.procedure?.get(0))
         val imageURL = "https://vielskermad.dk/wp-content/uploads/2020/11/lasagne-1200x900.jpg"
         Glide.with(this)
             .load(imageURL)
@@ -35,10 +35,10 @@ class HovedretFragment : Fragment() {
 
 
         binding.button1.setOnClickListener {
-         val array = resources.getStringArray(R.array.Lasagne)
-            binding.titelOpskrift.setText(array[0])
-            binding.ingredientsOpskrift.setText(array[1])
-            binding.manual.setText(array[2])
+
+            binding.titelOpskrift.setText(indhold.title?.get(0))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(0))
+            binding.manual.setText(indhold.procedure?.get(0))
             val imageURL = "https://vielskermad.dk/wp-content/uploads/2020/11/lasagne-1200x900.jpg"
 
             Glide.with(this)
@@ -46,10 +46,9 @@ class HovedretFragment : Fragment() {
                 .into(binding.mainCorse1Image)
         }
         binding.button2.setOnClickListener {
-            val array = resources.getStringArray(R.array.Spaghetti)
-            binding.titelOpskrift.setText(array[0])
-            binding.ingredientsOpskrift.setText(array[1])
-            binding.manual.setText(array[2])
+            binding.titelOpskrift.setText(indhold.title?.get(1))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(1))
+            binding.manual.setText(indhold.procedure?.get(1))
 
             val imageURL = "https://www.valdemarsro.dk/wp-content/2015/09/bolognese.jpg"
 
@@ -59,8 +58,23 @@ class HovedretFragment : Fragment() {
         }
 
         binding.button3.setOnClickListener{
-            val getta=IndholdHovedret
-            binding.titelOpskrift.setText(getta.ingredients?.get(0))
+            binding.titelOpskrift.setText(indhold.title?.get(2))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(2))
+            binding.manual.setText(indhold.procedure?.get(2))
+
+
+        }
+        binding.button4.setOnClickListener{
+            binding.titelOpskrift.setText(indhold.title?.get(3))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(3))
+            binding.manual.setText(indhold.procedure?.get(3))
+
+
+        }
+        binding.button5.setOnClickListener{
+            binding.titelOpskrift.setText(indhold.title?.get(4))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(4))
+            binding.manual.setText(indhold.procedure?.get(4))
 
 
         }

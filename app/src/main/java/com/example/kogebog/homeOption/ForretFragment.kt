@@ -21,49 +21,49 @@ class ForretFragment : Fragment() {
     ): View? {
         _binding = FragmentForretBinding.inflate(inflater, container, false)
 
-        val starters=IndholdForretter
-        binding.titelOpskrift.setText(starters.title?.get(0))
-        binding.ingredientsOpskrift.setText(starters.ingridients?.get(0))
-        binding.manual.setText(starters.procedure?.get(0))
+        val indhold=IndholdForretter
+        binding.titelOpskrift.setText(indhold.title?.get(0))
+        binding.ingredientsOpskrift.setText(indhold.ingredients?.get(0))
+        binding.manual.setText(indhold.procedure?.get(0))
 
         binding.button1.setOnClickListener{
-            val starters=starters
-            binding.titelOpskrift.setText(starters.title?.get(0))
-            binding.ingredientsOpskrift.setText(starters.ingridients?.get(0))
-            binding.manual.setText(starters.procedure?.get(0))
+
+            binding.titelOpskrift.setText(indhold.title?.get(0))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(0))
+            binding.manual.setText(indhold.procedure?.get(0))
 
         }
 
         binding.button2.setOnClickListener{
-            val starters=IndholdForretter
-            binding.titelOpskrift.setText(starters.title?.get(1))
-            binding.ingredientsOpskrift.setText(starters.ingridients?.get(1))
-            binding.manual.setText(starters.procedure?.get(1))
+
+            binding.titelOpskrift.setText(indhold.title?.get(1))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(1))
+            binding.manual.setText(indhold.procedure?.get(1))
 
         }
 
 
         binding.button3.setOnClickListener{
-            val starters=IndholdForretter
-            binding.titelOpskrift.setText(starters.title?.get(2))
-            binding.ingredientsOpskrift.setText(starters.ingridients?.get(2))
-            binding.manual.setText(starters.procedure?.get(2))
+
+            binding.titelOpskrift.setText(indhold.title?.get(2))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(2))
+            binding.manual.setText(indhold.procedure?.get(2))
 
         }
 
         binding.button4.setOnClickListener{
-            val starters=IndholdForretter
-            binding.titelOpskrift.setText(starters.title?.get(3))
-            binding.ingredientsOpskrift.setText(starters.ingridients?.get(3))
-            binding.manual.setText(starters.procedure?.get(3))
+
+            binding.titelOpskrift.setText(indhold.title?.get(3))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(3))
+            binding.manual.setText(indhold.procedure?.get(3))
 
         }
 
         binding.button5.setOnClickListener{
-            val starters=IndholdForretter
-            binding.titelOpskrift.setText(starters.title?.get(4))
-            binding.ingredientsOpskrift.setText(starters.ingridients?.get(4))
-            binding.manual.setText(starters.procedure?.get(4))
+
+            binding.titelOpskrift.setText(indhold.title?.get(4))
+            binding.ingredientsOpskrift.setText(indhold.ingredients?.get(4))
+            binding.manual.setText(indhold.procedure?.get(4))
 
         }
 

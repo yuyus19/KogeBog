@@ -8,7 +8,7 @@ object IndholdForretter {
         "Tun salat",
         "Tarteletter"
     )
-    var ingridients: Array<String?>?= arrayOf(
+    var ingredients: Array<String?>?= arrayOf(
         "300 g røget laks\n0,5 argurk\n3 forårsløg\n200 g fromage frais\n 1 bdt. basilikum\nfine salatblade\n100 g lakserogn\n12 grønne asparges fra glas\n4 skiver toastbrød\nsalt og peber",
         "6-8 skiver lækkert brød - fx surdejsbrød eller grydebrød\n1 spsk olivenolie\n1 fed hvidløg\n10 tomat, solmodne, skåret i tern\nMarinade til tomater\n1 knivspids honning\n1 spsk olivenolie\n1 fed hvidløg, knust\nfrisk basilikum, 10 blade, helt fintstrimlet\n0,50 tsk flagesalt\nsort peber, friskkværnet\nDerudover\n70 g parmaskinke, eller serrano (kan undlades)\nfrisk basilikum, 20 blade, skåret i strimler",
         "10 g smør\nca. 75 g grofthakket zittaurløg\n500 g kartofler i tern\n350 g porrer i ringe-den hvide del\n3/4Grøntsagsbouillon\n1 dl piskefløde\n1 tsk groft salt\nFriskkværnet hvid peber",

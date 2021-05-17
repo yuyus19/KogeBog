@@ -10,7 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:id="@+id/list_pane"
-        android:layout_width="140dp"
+        android:layout_width="185dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:orientation="vertical"
@@ -20,51 +20,45 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="130dp"
-            android:layout_height="60dp"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="@string/lasagne" />
+            android:text="Røget laks med agurkecreme" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="130dp"
-            android:layout_height="60dp"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="SPAGHETTI bolognese"/>
+            android:text="Bruchetta med tomat og basilikum"/>
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="130dp"
-            android:layout_height="60dp"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="indsæt Ret3"/>
+            android:text="Kartorffel suppe"/>
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="130dp"
-            android:layout_height="60dp"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="indsæt Ret4"/>
+            android:text="Tun salat"/>
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="130dp"
-            android:layout_height="60dp"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="indsæt Ret5"/>
+            android:text="Tarteletter"/>
 
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="130dp"
-            android:layout_height="60dp"
-            android:singleLine="false"
-            android:textSize="14sp"
-            android:text="indsæt Ret6"/>
+
 
     </LinearLayout>
 
@@ -78,7 +72,7 @@
         android:orientation="horizontal">
 
         <ScrollView
-            android:layout_width="345dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
@@ -122,10 +116,11 @@
                     android:layout_below="@id/ingredients_opskrift"/>
 
                 <ImageButton
+                    android:id="@+id/heart"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
+                    android:layout_below="@+id/titel_opskrift"
                     android:background="@color/cardview_light_background"
                     android:src="@drawable/favorite_size40dp">
 

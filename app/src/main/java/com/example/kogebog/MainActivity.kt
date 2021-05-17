@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         val favoritesFragment= FavouritesFragment()
         val settingsFragment= SettingsFragment()
 
-
-        makeCurrentFragment(homeFragment)
+if(null==savedInstanceState){
+        makeCurrentFragment(homeFragment)}
 
 binding.bottomNavigation.setOnNavigationItemSelectedListener {
     when(it.itemId){

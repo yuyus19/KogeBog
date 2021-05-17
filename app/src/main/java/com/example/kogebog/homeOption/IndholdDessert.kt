@@ -1,6 +1,6 @@
 package com.example.kogebog.homeOption
 
-object InholdDessert {
+object IndholdDessert {
 
     var title: Array<String?>? = arrayOf(
         "Hjemmelavet salt karamel is",
@@ -9,7 +9,7 @@ object InholdDessert {
         "Grillede bananer med mørk rom",
         "Jordbærtrifli"
     )
-    var ingridients: Array<String?>?= arrayOf(
+    var ingredients: Array<String?>?= arrayOf(
         "8 æggeblomme \n 175 g sukker \n 3 dl sødmælk \n 7 dl piskefløde \n 1 vaniljestang \n 100 g sukker \n 150 g piskefløde \n 0,50 tsk flagesalt",
         "1 vaniljestang \n 4 spsk rørsukker \n 3 dl piskefløde \n 1 dl sødmælk \n 5 æggeblomme",
         "125 g hvedemel \n 3 spsk sukker \n 0,50 tsk vaniljepulver \n 0,50 tsk stødt kardemomme \n 1 nip salt \n 3 æg \n 3 dl mælk \n 4 spsk øl, fx hvidøl (kan undlades) \n 1 spsk smør, til stegning",
