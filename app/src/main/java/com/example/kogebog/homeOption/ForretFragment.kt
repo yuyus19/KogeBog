@@ -27,10 +27,10 @@ class ForretFragment : Fragment() {
         binding.manual.setText(starters.procedure?.get(0))
 
         binding.button1.setOnClickListener{
-            val starters=Starters
-            binding.titelOpskrift.setText(starters.Headline?.get(0))
-            binding.ingredientsOpskrift.setText(starters.Ingridients?.get(0))
-            binding.manual.setText(starters.Procedure?.get(0))
+            val starters=starters
+            binding.titelOpskrift.setText(starters.title?.get(0))
+            binding.ingredientsOpskrift.setText(starters.ingridients?.get(0))
+            binding.manual.setText(starters.procedure?.get(0))
 
         }
 

@@ -9,39 +9,36 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentDrinksBinding
-import com.example.kogebog.Adapter.RecyclerAdapter
-import kotlinx.android.synthetic.main.fragment_drinks.*
 
 
-class DrinksFragment : Fragment(R.layout.fragment_drinks) {
 
-    //private var _binding: FragmentDrinksBinding? = null
+class DrinksFragment : Fragment() {
 
+    private var _binding: FragmentDrinksBinding?=null
     // This property is only valid between onCreateView and
-    // onDestroyView.
-    //private val binding get() = _binding!!
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
+// onDestroyView.
+    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_drinks, container, false)
+        _binding = FragmentDrinksBinding.inflate(inflater, container, false)
+
+        val starters=IndholdDrinks
+        binding.titelOpskrift.setText(starters.title?.get(0))
+        binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
+        binding.manual.setText(starters.procedure?.get(0))
+
+
+        val view = binding.root
+        return view
     }
 
-    override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(itemView, savedInstanceState)
-        recycler_View.apply {
-            // set a LinearLayoutManager to handle Android
-            // RecyclerView behavior
-            layoutManager = LinearLayoutManager(activity)
-            // set the custom adapter to the RecyclerView
-            adapter = RecyclerAdapter()
-        }
-
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentRecipeBinding
+import com.example.kogebog.Adapter.MainRecycler
 
 
 class RecipeFragment : Fragment() {
@@ -66,7 +67,7 @@ private var _binding:FragmentRecipeBinding?=null
             var tx = fManager.beginTransaction()
 
 
-            tx.replace(R.id.fl_wrapper, DrinksFragment())
+            tx.replace(R.id.fl_wrapper, MainRecycler())
             tx.addToBackStack(null)
             tx.commit()
         }
