@@ -82,13 +82,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                     Toast.LENGTH_LONG
                 ).show()
 
-                var fManager = DrinksFragment().parentFragmentManager
-                var tx = fManager.beginTransaction()
 
-
-                tx.replace(R.id.fl_wrapper, DrinksFragment())
-                tx.addToBackStack(null)
-                tx.commit()
             })
 
 

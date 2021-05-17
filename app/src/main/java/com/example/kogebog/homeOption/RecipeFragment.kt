@@ -67,7 +67,7 @@ private var _binding:FragmentRecipeBinding?=null
             var tx = fManager.beginTransaction()
 
 
-            tx.replace(R.id.fl_wrapper, MainRecycler())
+            tx.replace(R.id.fl_wrapper, DrinksFragment())
             tx.addToBackStack(null)
             tx.commit()
         }
