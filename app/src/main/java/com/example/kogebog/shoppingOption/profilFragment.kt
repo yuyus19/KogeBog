@@ -1,4 +1,4 @@
-package com.example.kogebog.settingsOption
+package com.example.kogebog.shoppingOption
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

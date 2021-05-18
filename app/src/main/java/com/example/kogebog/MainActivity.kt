@@ -2,14 +2,12 @@ package com.example.kogebog
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.example.dicerally.R
 import com.example.dicerally.databinding.ActivityMainBinding
 import com.example.kogebog.favouriteOption.FavouritesFragment
-import com.example.kogebog.XXXfragments.HomeFragment
 import com.example.kogebog.homeOption.RecipeFragment
-import com.example.kogebog.settingsOption.SettingsFragment
+import com.example.kogebog.shoppingOption.ShoppingFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,8 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val homeFragment= RecipeFragment()
         val favoritesFragment= FavouritesFragment()
-        val settingsFragment= SettingsFragment()
-
+        val shoppingFragment= ShoppingFragment()
 if(null==savedInstanceState){
         makeCurrentFragment(homeFragment)}
 
@@ -33,7 +30,7 @@ binding.bottomNavigation.setOnNavigationItemSelectedListener {
     when(it.itemId){
         R.id.ic_home ->makeCurrentFragment(homeFragment)
         R.id.ic_favorite ->makeCurrentFragment(favoritesFragment)
-        R.id.ic_set ->makeCurrentFragment(settingsFragment)
+        R.id.ic_shop ->makeCurrentFragment(shoppingFragment)
     }
     true
 }
