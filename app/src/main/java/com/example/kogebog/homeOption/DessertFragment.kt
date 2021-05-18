@@ -33,12 +33,17 @@ class DessertFragment : Fragment() {
         binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
         binding.manual.setText(starters.procedure?.get(0))
 
+        val imageURL = "https://www.valdemarsro.dk/wp-content/2015/09/saltkaramelis-opskrift.jpg"
+        Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
+
         binding.button1.setOnClickListener{
 
             binding.titelOpskrift.setText(starters.title?.get(0))
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
             binding.manual.setText(starters.procedure?.get(0))
 
+            val imageURL = "https://www.valdemarsro.dk/wp-content/2015/09/saltkaramelis-opskrift.jpg"
+            Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
         binding.button2.setOnClickListener{
@@ -47,6 +52,8 @@ class DessertFragment : Fragment() {
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(1))
             binding.manual.setText(starters.procedure?.get(1))
 
+            val imageURL = "https://www.valdemarsro.dk/wp-content/2016/09/creme-brulee.jpg"
+            Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
 
@@ -56,6 +63,8 @@ class DessertFragment : Fragment() {
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(2))
             binding.manual.setText(starters.procedure?.get(2))
 
+            val imageURL = "https://www.valdemarsro.dk/wp-content/2007/09/pandekager1.jpg"
+            Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
         binding.button4.setOnClickListener{
@@ -64,6 +73,8 @@ class DessertFragment : Fragment() {
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(3))
             binding.manual.setText(starters.procedure?.get(3))
 
+            val imageURL = "https://www.valdemarsro.dk/wp-content/2015/08/grillede-bananer_opskrift.jpg"
+            Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
         binding.button5.setOnClickListener{
@@ -72,6 +83,8 @@ class DessertFragment : Fragment() {
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(4))
             binding.manual.setText(starters.procedure?.get(4))
 
+            val imageURL = "https://www.valdemarsro.dk/wp-content/2019/05/jordbaertrifli.jpg"
+            Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
         val view = binding.root

@@ -14,9 +14,9 @@
         />
 
     <item
-        android:id="@+id/ic_set"
-        android:icon="@drawable/ic__settings"
-        android:title="@string/settings"
+        android:id="@+id/ic_shop"
+        android:icon="@drawable/ic_shopping"
+        android:title="@string/shopping"
         />
 
 
