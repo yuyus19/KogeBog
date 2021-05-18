@@ -5,12 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentDrinksBinding
-import com.example.dicerally.databinding.FragmentForretBinding
+import com.example.kogebog.contents.IndholdDrinks
 
 
 class DrinksFragment : Fragment() {
@@ -27,7 +24,7 @@ class DrinksFragment : Fragment() {
     ): View? {
         _binding = FragmentDrinksBinding.inflate(inflater, container, false)
 
-        val starters=IndholdDrinks
+        val starters= IndholdDrinks
         binding.titelOpskrift.setText(starters.title?.get(0))
         binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
         binding.manual.setText(starters.procedure?.get(0))

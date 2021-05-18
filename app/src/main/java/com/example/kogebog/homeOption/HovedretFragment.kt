@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentHovedretBinding
+import com.example.kogebog.contents.IndholdHovedret
 
 
 class HovedretFragment : Fragment() {
@@ -24,7 +24,7 @@ class HovedretFragment : Fragment() {
     ): View? {
         _binding = FragmentHovedretBinding.inflate(inflater, container, false)
 
-        val indhold=IndholdHovedret
+        val indhold= IndholdHovedret
         binding.titelOpskrift.setText(indhold.title?.get(0))
         binding.ingredientsOpskrift.setText(indhold.ingredients?.get(0))
         binding.manual.setText(indhold.procedure?.get(0))

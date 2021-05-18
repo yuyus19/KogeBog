@@ -5,13 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
-import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentDessertBinding
-import com.example.dicerally.databinding.FragmentForretBinding
-import com.example.dicerally.databinding.FragmentHovedretBinding
+import com.example.kogebog.contents.IndholdDessert
 
 class DessertFragment : Fragment() {
 
@@ -28,7 +24,7 @@ class DessertFragment : Fragment() {
     ): View? {
         _binding = FragmentDessertBinding.inflate(inflater, container, false)
 
-        val starters=IndholdDessert
+        val starters= IndholdDessert
         binding.titelOpskrift.setText(starters.title?.get(0))
         binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
         binding.manual.setText(starters.procedure?.get(0))

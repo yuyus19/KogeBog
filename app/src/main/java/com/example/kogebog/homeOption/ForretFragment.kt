@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.example.dicerally.databinding.FragmentForretBinding
+import com.example.kogebog.contents.IndholdForretter
 
 class ForretFragment : Fragment() {
 
@@ -22,7 +23,7 @@ class ForretFragment : Fragment() {
     ): View? {
         _binding = FragmentForretBinding.inflate(inflater, container, false)
 
-        val indhold=IndholdForretter
+        val indhold= IndholdForretter
         binding.titelOpskrift.setText(indhold.title?.get(0))
         binding.ingredientsOpskrift.setText(indhold.ingredients?.get(0))
         binding.manual.setText(indhold.procedure?.get(0))
