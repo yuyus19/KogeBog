@@ -1,4 +1,4 @@
-package com.example.kogebog.homeOption
+package com.example.kogebog.contents
 
 object IndholdDrinks {
     var title = arrayOf(

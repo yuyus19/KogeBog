@@ -7,13 +7,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dicerally.R
-import com.example.kogebog.homeOption.DrinksFragment
-import com.example.kogebog.homeOption.ForretFragment
-import com.example.kogebog.homeOption.IndholdDrinks
+import com.example.kogebog.contents.IndholdDrinks
 
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
