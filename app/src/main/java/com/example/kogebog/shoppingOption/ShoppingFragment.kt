@@ -57,7 +57,7 @@ class ShoppingFragment : Fragment() {
         _binding = FragmentShoppingBinding.inflate(inflater, container, false)
         // Initializing the array lists and the adapter
         var itemlist = arrayListOf<String>()
-        var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_1, itemlist)
+        var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_multiple_choice, itemlist)
 
         binding.btnAdd.setOnClickListener {
             Toast.makeText(context, "You have added an item", Toast.LENGTH_LONG).show()
