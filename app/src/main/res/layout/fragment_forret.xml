@@ -67,9 +67,9 @@
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="10dp"
         android:name="com.example.SelectAnItemFragment"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingLeft="5dp">
+                android:padding="25dp">
 
                 <TextView
                     android:id="@+id/titel_opskrift"
@@ -93,39 +93,59 @@
                     android:layout_alignParentTop="true"
 
                     />
+
+                <ImageButton
+                android:id="@+id/heart"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/titel_opskrift"
+                android:background="@color/cardview_light_background"
+                android:src="@drawable/favorite_size40dp"/>
                 <ImageView
                     android:id="@+id/mainCorse1Image"
                     android:layout_width="200dp"
                     android:layout_height="90dp"
-                    android:layout_below="@+id/titel_opskrift"
+                    android:layout_below="@+id/heart"
                     android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:id="@+id/ingredienser_static"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Indgredienser"
+                    android:layout_below="@+id/mainCorse1Image"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
                     />
                 <TextView
                     android:id="@+id/ingredients_opskrift"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/mainCorse1Image"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="7dp" />
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ingredienser_static"
+                    />
 
+                <TextView
+                    android:id="@+id/fremgangsmåde_static"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ingredients_opskrift"
+                    android:layout_marginTop="10dp"
+                    android:text="Fremgangsmåde"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/manual"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_below="@id/ingredients_opskrift"/>
-
-                <ImageButton
-                    android:id="@+id/heart"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/titel_opskrift"
-                    android:background="@color/cardview_light_background"
-                    android:src="@drawable/favorite_size40dp">
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/fremgangsmåde_static"/>
 
 
-                </ImageButton>
+
+
+
             </RelativeLayout>
         </ScrollView>
     </LinearLayout>
