@@ -10,7 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:id="@+id/list_pane"
-        android:layout_width="185dp"
+        android:layout_width="181dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:orientation="vertical"
