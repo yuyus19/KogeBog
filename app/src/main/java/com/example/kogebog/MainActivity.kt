@@ -10,7 +10,7 @@ import com.example.kogebog.homeOption.RecipeFragment
 import com.example.kogebog.shoppingOption.ShoppingFragment
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
 
   private lateinit var binding: ActivityMainBinding
 

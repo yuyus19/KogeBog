@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.kogebog.MainActivity">
+    tools:context="com.example.kogebog.shoppingOption.ShoppingFragment">
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -31,8 +31,9 @@
         android:orientation="horizontal"
         android:layout_below="@id/editText"
         android:padding="10dp">
+
         <Button
-            android:id="@+id/add"
+            android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add"/>
@@ -42,7 +43,6 @@
             android:layout_height="wrap_content"
             android:text="Delete"
             android:layout_marginLeft="80dp"/>
-
         <Button
             android:id="@+id/clear"
             android:layout_width="104dp"
@@ -68,6 +68,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_below="@id/textView1"
-        android:choiceMode="multipleChoice"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="-1dp"
+        android:choiceMode="multipleChoice" />
 
 </RelativeLayout>

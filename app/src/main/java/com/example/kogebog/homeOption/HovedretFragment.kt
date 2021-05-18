@@ -10,6 +10,7 @@ import com.example.dicerally.databinding.FragmentHovedretBinding
 import com.example.kogebog.contents.IndholdHovedret
 
 
+
 class HovedretFragment : Fragment() {
 
     private var _binding: FragmentHovedretBinding?=null
