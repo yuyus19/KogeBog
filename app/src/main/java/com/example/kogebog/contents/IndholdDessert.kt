@@ -2,21 +2,21 @@ package com.example.kogebog.contents
 
 object IndholdDessert {
 
-    var title: Array<String?>? = arrayOf(
+    var title = arrayOf(
         "Hjemmelavet salt karamel is",
         "Creme brulee",
         "Pandekager",
         "Grillede bananer med mørk rom",
         "Jordbærtrifli"
     )
-    var ingredients: Array<String?>?= arrayOf(
+    var ingredients = arrayOf(
         "8 æggeblomme \n 175 g sukker \n 3 dl sødmælk \n 7 dl piskefløde \n 1 vaniljestang \n 100 g sukker \n 150 g piskefløde \n 0,50 tsk flagesalt",
         "1 vaniljestang \n 4 spsk rørsukker \n 3 dl piskefløde \n 1 dl sødmælk \n 5 æggeblomme",
         "125 g hvedemel \n 3 spsk sukker \n 0,50 tsk vaniljepulver \n 0,50 tsk stødt kardemomme \n 1 nip salt \n 3 æg \n 3 dl mælk \n 4 spsk øl, fx hvidøl (kan undlades) \n 1 spsk smør, til stegning",
         "4 banan, modne \n 8 cl mørk rom \n 400 g vaniljeis \n 8 skumfiduser, store \n 50 g mørk chokolade, smeltet \n 0,50 bakke jordbær",
         "80 g mandelmel \n 100 g flormelis \n 30 g æggehvide \n 3 æggeblomme \n 60 g sukker \n 1 vaniljestang \n 1,50 dl piskefløde \n 350 g jordbær, skåret i kvarte \n 20 g sukker \n 0,50 tsk vaniljesukker"
     )
-    var procedure: Array<String?>? = arrayOf(
+    var procedure = arrayOf(
         "Kom sukker og piskefløde i en stor gryde og kog det op. Lad det koge under jævnlig omrøring, til karamellen er 110 grader. Lad det køle af i gryden og rør et nip salt i. Flæk vaniljestangen på langs og skrab kornene ud. Fordel vaniljekornene i sukkeret og kom vanilje, sukker og æggeblommer i en skål. Pisk en luftigt og hvid æggesnaps med en håndmikser på højeste hastighed. Kom den tomme vaniljestang i en gryde sammen med mælk og piskefløde og kog op til 90 grader. Fjern vaniljestangen fra mælken og fløden og hæld langsomt vaniljefløden i æggesnapsen i en tynd stråle, mens der konstant piskes. Kom blandingen tilbage i gryden sammen med 2 spsk. saltkaramel og varm langsomt op under omrøring til 80 grader. Mål gerne med en termometer og hold godt øje med at temperaturen ikke bliver for høj. Kom iscremen i en beholder med låg og stil i køleskabet i 2 timer. Hæld cremen på ismaskine og lad den køre til isen har konsistens som en fast softice. Kom i en isbeholder og fordel striber af saltkaramel og vend karamellen i isen. Der må gerne være hel stykker af karamel, så det skal ikke røres ud. Sæt isen i fryseren i minimum 2 timer, inden servering.",
         "Flæk vaniljestangen på langs og skrab vaniljekornene ud med kniven. Fordel vaniljekornene i sukkeret. Kom fløde og sødmælk i en gryde, sammen med den tomme vaniljestang. Pisk æggeblommer og vaniljesukker til æggesnaps og indtil at sukkeret er rørt helt ud. Varm gryden med mælk, fløde og vaniljestang op indtil det næste koger og tag så gryden af varmen, lad det køle af et par minutter og hæld så den varme fløde i æggesnapsen under omrøring. Alt det skum der lægger sig på toppen af skålen fjernes – der kan godt være en del. Fordel vaniljecremen i de fire ramakiner og bag dem i en forvarmet ovn ved 140 grader varmluft i 20-30 minutter. De skal være bløde og skælvende i midten og må endelig ikke få for meget, for så bliver de tørre. Lad dem køle af i stuetemperatur, hvorefter de sættes på køl i et par timer, eller til næste dag. Ved servering drysses de med et tyndt lag rørsukker, som brændes forsigtigt med en gasbrænder indtil sukkeret karamelisere. Jeg plejer at gøre dette af to omgange, for et ekstra tykt og sprødt sukkerlag.Flæk vaniljestangen på langs og skrab vaniljekornene ud med kniven. Fordel vaniljekornene i sukkeret. Kom fløde og sødmælk i en gryde, sammen med den tomme vaniljestang. Pisk æggeblommer og vaniljesukker til æggesnaps og indtil at sukkeret er rørt helt ud. Varm gryden med mælk, fløde og vaniljestang op indtil det næste koger og tag så gryden af varmen, lad det køle af et par minutter og hæld så den varme fløde i æggesnapsen under omrøring. Alt det skum der lægger sig på toppen af skålen fjernes – der kan godt være en del. Fordel vaniljecremen i de fire ramakiner og bag dem i en forvarmet ovn ved 140 grader varmluft i 20-30 minutter. De skal være bløde og skælvende i midten og må endelig ikke få for meget, for så bliver de tørre. Lad dem køle af i stuetemperatur, hvorefter de sættes på køl i et par timer, eller til næste dag. Ved servering drysses de med et tyndt lag rørsukker, som brændes forsigtigt med en gasbrænder indtil sukkeret karamelisere. Jeg plejer at gøre dette af to omgange, for et ekstra tykt og sprødt sukkerlag.",
         "Pisk alle ingredienserne sammen i en skål med en håndmikser og lad derefter dejen hvile i minimum 20 minutter på køl. Smelt lidt smør på en pande, og når den er godt varm, steges pandekagerne på begge sider,  til de er flotte lysebrune.",
