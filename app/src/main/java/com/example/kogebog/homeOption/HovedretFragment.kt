@@ -51,10 +51,7 @@ class HovedretFragment : Fragment() {
             binding.manual.setText(indhold.procedure?.get(1))
 
             val imageURL = "https://www.valdemarsro.dk/wp-content/2015/09/bolognese.jpg"
-
-            Glide.with(this)
-                .load(imageURL).centerCrop()
-                .into(binding.mainCorse1Image)
+            Glide.with(this).load(imageURL).centerCrop().into(binding.mainCorse1Image)
         }
 
         binding.button3.setOnClickListener{
@@ -62,6 +59,8 @@ class HovedretFragment : Fragment() {
             binding.ingredientsOpskrift.setText(indhold.ingredients?.get(2))
             binding.manual.setText(indhold.procedure?.get(2))
 
+            val imageURL = "https://www.valdemarsro.dk/wp-content/2014/07/stegt-flaesk-persillesauce.jpg"
+            Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
 
         }
         binding.button4.setOnClickListener{
@@ -69,13 +68,16 @@ class HovedretFragment : Fragment() {
             binding.ingredientsOpskrift.setText(indhold.ingredients?.get(3))
             binding.manual.setText(indhold.procedure?.get(3))
 
-
+            val imagURL = "https://www.valdemarsro.dk/wp-content/2008/01/burgere.jpg"
+            Glide.with(this).load(imagURL).into(binding.mainCorse1Image)
         }
         binding.button5.setOnClickListener{
             binding.titelOpskrift.setText(indhold.title?.get(4))
             binding.ingredientsOpskrift.setText(indhold.ingredients?.get(4))
             binding.manual.setText(indhold.procedure?.get(4))
 
+            val imagURL = "https://www.valdemarsro.dk/wp-content/2017/12/moerbrad-fyldt.jpg"
+            Glide.with(this).load(imagURL).into(binding.mainCorse1Image)
 
         }
 
