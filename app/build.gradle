@@ -1,8 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-
-
+    id 'kotlin-kapt'
 }
 apply plugin: "kotlin-android-extensions"
 android {
@@ -53,12 +52,14 @@ buildFeatures{
         annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
         //Room database Library
-        implementation 'androidx.room:room-runtime:2.3.0'
-        kapt 'androidx.room:room-compiler:2.3.0'
-        implementation 'androidx.room:room-ktx:2.3.0'
-        implementation 'com.makeramen:roundedimageview:2.3.0'
-        implementation "androidx.recyclerview:recyclerview:1.2.0"
-
+        def room_version = "2.3.0"
+        implementation ("androidx.room:room-runtime:$room_version")
+        annotationProcessor "androidx.room:room-compiler:$room_version"
+        kapt ("androidx.room:room-compiler:$room_version")
+        implementation("androidx.room:room-ktx:$room_version")
+        implementation "androidx.room:room-rxjava2:$room_version"
+        implementation ("androidx.room:room-ktx:$room_version")
+        implementation ("com.makeramen:roundedimageview:$room_version")
 
         // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
         annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
@@ -66,11 +67,6 @@ buildFeatures{
         def nav_version = "2.3.5"
         implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
         implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
-
-
-
-
     }
 
 
