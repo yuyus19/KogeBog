@@ -14,7 +14,7 @@ interface FoodDao {
     suspend fun addFood(food: Food)
 
     @Query("SELECT * FROM food_table ORDER BY id ASC")
-    fun readALLData(): LiveData<List<Food>>
+    fun readAllData(): LiveData<List<Food>>
 
 
 
