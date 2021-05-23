@@ -1,23 +1,18 @@
 package com.example.kogebog.homeOption
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.TextUtils
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.ListFragment
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentForretBinding
 import com.example.kogebog.contents.IndholdForretter
 import com.example.kogebog.dataBase.Food
 import com.example.kogebog.dataBase.FoodViewModel
-import com.example.kogebog.favouriteOption.FavouritesFragment
 import kotlinx.android.synthetic.main.fragment_forret.*
 
 class ForretFragment : Fragment() {

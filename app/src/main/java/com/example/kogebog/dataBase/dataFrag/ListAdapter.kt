@@ -3,13 +3,10 @@ package com.example.kogebog.dataBase.dataFrag
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dicerally.R
 import com.example.kogebog.dataBase.Food
-import com.example.kogebog.favouriteOption.FavouritesFragment
 import com.example.kogebog.homeOption.ForretFragment
 import kotlinx.android.synthetic.main.custom_row.view.*
 
@@ -37,8 +34,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             var tx = fManager.beginTransaction()
 
 
-            tx.replace(R.id.fl_wrapper, FavouritesFragment())
-            tx.addToBackStack(null)
+            tx.replace(R.id.fl_wrapper, ForretFragment())
             tx.commit()
 
         }
