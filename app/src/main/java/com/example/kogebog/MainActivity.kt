@@ -3,12 +3,14 @@ package com.example.kogebog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.whenResumed
 import com.example.dicerally.R
 import com.example.dicerally.databinding.ActivityMainBinding
 import com.example.kogebog.dataBase.dataFrag.ListFragment
 import com.example.kogebog.favouriteOption.FavouritesFragment
 import com.example.kogebog.homeOption.RecipeFragment
 import com.example.kogebog.shoppingOption.ShoppingFragment
+import kotlinx.android.synthetic.main.fragment_shopping.*
 
 
 class MainActivity : AppCompatActivity(){
@@ -45,7 +47,6 @@ binding.bottomNavigation.setOnNavigationItemSelectedListener {
     private fun makeCurrentFragment(fragment: Fragment) {
        supportFragmentManager.beginTransaction().apply {
            replace(R.id.fl_wrapper, fragment)
-           addToBackStack(null)
            commit()
        }
     }

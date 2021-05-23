@@ -93,16 +93,9 @@ class ForretFragment : Fragment() {
         }
 
 
-        binding.heart.setOnClickListener{
+        binding.heart.setOnClickListener {
             insertDataToDatabase()
-            var fManager = requireActivity().supportFragmentManager
-            var tx = fManager.beginTransaction()
-
-
-            tx.replace(R.id.fl_wrapper, ListFragment())
-            tx.addToBackStack(null)
-            tx.commit()
-        }
+                    }
 
 
         val view = binding.root

@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dicerally.R
 import com.example.kogebog.dataBase.Food
+import com.example.kogebog.favouriteOption.FavouritesFragment
 import com.example.kogebog.homeOption.ForretFragment
 import kotlinx.android.synthetic.main.custom_row.view.*
 
@@ -27,7 +28,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = foodList[position]
-        holder.itemView.id_txt.text = currentItem.id.toString()
+        holder.itemView.id_txt.text=currentItem.id.toString()
         holder.itemView.titel_txt.text = currentItem.titel
 
         holder.itemView.rowLayout.setOnClickListener {
@@ -36,7 +37,7 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             var tx = fManager.beginTransaction()
 
 
-            tx.replace(R.id.fl_wrapper, ForretFragment())
+            tx.replace(R.id.fl_wrapper, FavouritesFragment())
             tx.addToBackStack(null)
             tx.commit()
 
