@@ -81,6 +81,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:addStatesFromChildren="false"
+                android:clickable="true"
                 android:orientation="vertical"
                 android:padding="25dp">
 
@@ -92,41 +94,42 @@
                     android:paddingBottom="20dp"
                     android:textSize="35dp" />
 
-                <ImageButton
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/heart"
-                    android:layout_width="88dp"
-                    android:layout_height="83dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginRight="18dp"
                     android:layout_toRightOf="@+id/titel_opskrift"
                     android:background="@color/cardview_light_background"
-                    android:src="@drawable/favorite_size40dp" />
+                    android:src="@drawable/favorite_size40dp"
+                    app:backgroundTint="#F60303"
+                    app:rippleColor="#FF0000" />
 
                 <ImageView
                     android:id="@+id/mainCorse1Image"
                     android:layout_width="400dp"
                     android:layout_height="180dp"
                     android:layout_below="@+id/titel_opskrift"
-                    android:layout_centerHorizontal="true"
-                    />
-
+                    android:layout_centerHorizontal="true" />
 
 
                 <TextView
                     android:id="@+id/ingredienser_static"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Indgredienser"
                     android:layout_below="@+id/mainCorse1Image"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
+                    android:text="Indgredienser"
                     android:textSize="16dp"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/ingredients_opskrift"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/ingredienser_static"
-                    />
+                    android:layout_below="@id/ingredienser_static" />
 
                 <TextView
                     android:id="@+id/fremgangsmåde_static"
@@ -137,14 +140,12 @@
                     android:text="Fremgangsmåde"
                     android:textSize="16dp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/manual"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/fremgangsmåde_static"/>
-
-
-
+                    android:layout_below="@id/fremgangsmåde_static" />
 
 
             </RelativeLayout>

@@ -13,60 +13,66 @@ import com.example.dicerally.databinding.FragmentForretBinding
 import com.example.kogebog.contents.IndholdForretter
 import com.example.kogebog.dataBase.Food
 import com.example.kogebog.dataBase.FoodViewModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_forret.*
 
 class ForretFragment : Fragment() {
 
-    private var _binding: FragmentForretBinding?=null
+    private var _binding: FragmentForretBinding? = null
     private val binding get() = _binding!!
     private lateinit var mFoodViewModel: FoodViewModel
 
 
-    override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?, savedInstanceState: Bundle?
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentForretBinding.inflate(inflater, container, false)
         mFoodViewModel = ViewModelProvider(this).get(FoodViewModel::class.java)
 
-        val indhold= IndholdForretter
+        val indhold = IndholdForretter
         binding.titelOpskrift.setText(indhold.title?.get(0))
         binding.ingredientsOpskrift.setText(indhold.ingredients?.get(0))
         binding.manual.setText(indhold.procedure?.get(0))
 
-        val imageURL = "https://xn--minkbmand-o8a.dk/sites/minkobmand.dk/files/styles/recipe_large/public/mk-roegetlaks-800x568_0.png?itok=_LXjbgpX"
+        val imageURL =
+            "https://xn--minkbmand-o8a.dk/sites/minkobmand.dk/files/styles/recipe_large/public/mk-roegetlaks-800x568_0.png?itok=_LXjbgpX"
         Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
 
-        binding.button1.setOnClickListener{
+        binding.button1.setOnClickListener {
 
             binding.titelOpskrift.setText(indhold.title?.get(0))
             binding.ingredientsOpskrift.setText(indhold.ingredients?.get(0))
             binding.manual.setText(indhold.procedure?.get(0))
 
-            val imageURL = "https://xn--minkbmand-o8a.dk/sites/minkobmand.dk/files/styles/recipe_large/public/mk-roegetlaks-800x568_0.png?itok=_LXjbgpX"
+            val imageURL =
+                "https://xn--minkbmand-o8a.dk/sites/minkobmand.dk/files/styles/recipe_large/public/mk-roegetlaks-800x568_0.png?itok=_LXjbgpX"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
-        binding.button2.setOnClickListener{
+        binding.button2.setOnClickListener {
 
             binding.titelOpskrift.setText(indhold.title?.get(1))
             binding.ingredientsOpskrift.setText(indhold.ingredients?.get(1))
             binding.manual.setText(indhold.procedure?.get(1))
 
-            val imageURL = "https://img.mummum.dk/wp-content/uploads/2019/04/Bruschetta-med-serranoskinke.jpg"
+            val imageURL =
+                "https://img.mummum.dk/wp-content/uploads/2019/04/Bruschetta-med-serranoskinke.jpg"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
 
-        binding.button3.setOnClickListener{
+        binding.button3.setOnClickListener {
 
             binding.titelOpskrift.setText(indhold.title?.get(2))
             binding.ingredientsOpskrift.setText(indhold.ingredients?.get(2))
             binding.manual.setText(indhold.procedure?.get(2))
 
-            val imageURL = "https://www.pigenogpomfritten.dk/wp-content/uploads/2013/10/porresuppe6.jpg"
+            val imageURL =
+                "https://www.pigenogpomfritten.dk/wp-content/uploads/2013/10/porresuppe6.jpg"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
-        binding.button4.setOnClickListener{
+        binding.button4.setOnClickListener {
 
             binding.titelOpskrift.setText(indhold.title?.get(3))
             binding.ingredientsOpskrift.setText(indhold.ingredients?.get(3))
@@ -77,20 +83,24 @@ class ForretFragment : Fragment() {
         }
 
 
-        binding.button5.setOnClickListener{
+        binding.button5.setOnClickListener {
 
             binding.titelOpskrift.setText(indhold.title?.get(4))
             binding.ingredientsOpskrift.setText(indhold.ingredients?.get(4))
             binding.manual.setText(indhold.procedure?.get(4))
 
-            val imageURL = "https://www.madformadelskere.dk/wp-content/uploads/2019/04/Tarteletter-med-hoens-i-asparges-1.jpg"
+            val imageURL =
+                "https://www.madformadelskere.dk/wp-content/uploads/2019/04/Tarteletter-med-hoens-i-asparges-1.jpg"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
 
         binding.heart.setOnClickListener {
             insertDataToDatabase()
-                    }
+            heart.context
+            isHeartGone(heart, true)
+
+        }
 
 
         val view = binding.root
@@ -103,7 +113,7 @@ class ForretFragment : Fragment() {
         val mIngredients = ingredients_opskrift.text.toString()
         val mManual = manual.text.toString()
 
-        if(inputCheck(mTitel, mIngredients, mManual)){
+        if (inputCheck(mTitel, mIngredients, mManual)) {
             // Create User Object
             val food = Food(
                 0,
@@ -115,13 +125,24 @@ class ForretFragment : Fragment() {
             mFoodViewModel.addFood(food)
             Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
 
-        }else{
-            Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG)
+                .show()
         }
     }
 
-    private fun inputCheck(mTitel: String, mIngredients: String, mManual: String): Boolean{
-        return !(TextUtils.isEmpty(mTitel) && TextUtils.isEmpty(mIngredients) && TextUtils.isEmpty(mManual))
+    fun isHeartGone(view: FloatingActionButton, isGone: Boolean?) {
+        if (isGone == null || isGone) {
+            view.hide()
+        } else {
+            view.show()
+        }
+    }
+
+    private fun inputCheck(mTitel: String, mIngredients: String, mManual: String): Boolean {
+        return !(TextUtils.isEmpty(mTitel) && TextUtils.isEmpty(mIngredients) && TextUtils.isEmpty(
+            mManual
+        ))
     }
 
 }
