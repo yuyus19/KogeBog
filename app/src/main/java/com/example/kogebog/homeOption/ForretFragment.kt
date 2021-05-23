@@ -1,20 +1,28 @@
 package com.example.kogebog.homeOption
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.dicerally.databinding.FragmentForretBinding
 import com.example.kogebog.contents.IndholdForretter
+import com.example.kogebog.dataBase.Food
+import com.example.kogebog.dataBase.FoodViewModel
+import kotlinx.android.synthetic.main.fragment_forret.*
 
 class ForretFragment : Fragment() {
 
     private var _binding: FragmentForretBinding?=null
-    // This property is only valid between onCreateView and
-// onDestroyView.
     private val binding get() = _binding!!
+    private lateinit var mFoodViewModel: FoodViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +30,7 @@ class ForretFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentForretBinding.inflate(inflater, container, false)
+        mFoodViewModel = ViewModelProvider(this).get(FoodViewModel::class.java)
 
         val indhold= IndholdForretter
         binding.titelOpskrift.setText(indhold.title?.get(0))
@@ -83,6 +92,13 @@ class ForretFragment : Fragment() {
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
+
+        binding.heart.setOnClickListener{
+            insertDataToDatabase()
+
+        }
+
+
         val view = binding.root
         return view
     }
@@ -90,6 +106,32 @@ class ForretFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun insertDataToDatabase() {
+        val mTitel = titel_opskrift.text.toString()
+        val mIngredients = ingredients_opskrift.text.toString()
+        val mManual = manual.text.toString()
+
+        if(inputCheck(mTitel, mIngredients, mManual)){
+            // Create User Object
+            val food = Food(
+                0,
+                mTitel,
+                mIngredients,
+                mManual
+            )
+            // Add Data to Database
+            mFoodViewModel.addFood(food)
+            Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
+
+        }else{
+            Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun inputCheck(mTitel: String, mIngredients: String, mManual: String): Boolean{
+        return !(TextUtils.isEmpty(mTitel) && TextUtils.isEmpty(mIngredients) && TextUtils.isEmpty(mManual))
     }
 
 }

@@ -8,7 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class FoodViewModel(application: Application): AndroidViewModel(application) {
-    private val readAllData: LiveData<List<Food>>
+    val readAllData: LiveData<List<Food>>
     private val repository: FoodRepository
 
     init {
@@ -22,5 +22,21 @@ class FoodViewModel(application: Application): AndroidViewModel(application) {
             repository.addFood(food)
         }
     }
+    fun updateFood(food: Food){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateFood(food)
+        }
+    }
 
+    fun deleteFood(food: Food){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteFood(food)
+        }
+    }
+
+    fun deleteAllFood(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllFood()
+        }
+    }
 }

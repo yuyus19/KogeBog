@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentRecipeBinding
-import com.example.kogebog.Adapter.MainRecycler
+
 
 
 class RecipeFragment : Fragment() {

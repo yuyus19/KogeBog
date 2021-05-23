@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.dicerally.R
 import com.example.dicerally.databinding.ActivityMainBinding
+import com.example.kogebog.dataBase.dataFrag.ListFragment
 import com.example.kogebog.favouriteOption.FavouritesFragment
 import com.example.kogebog.homeOption.RecipeFragment
 import com.example.kogebog.shoppingOption.ShoppingFragment
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity(){
         setContentView(binding.root)
 
         val homeFragment= RecipeFragment()
-        val favoritesFragment= FavouritesFragment()
+        val favoritesFragment= ListFragment()
         val shoppingFragment= ShoppingFragment()
 if(null==savedInstanceState){
         makeCurrentFragment(homeFragment)}

@@ -8,14 +8,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Home" />
-    <string name="Hovedret" >Hovedret</string>
-    <string name="Forret" >Forret</string>
+    <string name="Hovedret">Hovedret</string>
+    <string name="Forret">Forret</string>
     <string name="lasagne">Lasagne</string>
 
-    <string-array
-        name="Spaghetti">
-        <item
-            >Spaghetti Bolognese</item>
+    <string-array name="Spaghetti">
+        <item>Spaghetti Bolognese</item>
         <item>
             <br> 50 g bacon \n
             </br>
@@ -32,8 +30,7 @@
             <br> salt \n </br>
             <br> sort peber, friskkværnet </br>
             </item>
-        <item
-            >Steg bacon i olivenolie i en tykbundet gryde ved middelhøj varme. Tag baconen op og lad den dryppe af på et stykke køkkenrulle.
+        <item>Steg bacon i olivenolie i en tykbundet gryde ved middelhøj varme. Tag baconen op og lad den dryppe af på et stykke køkkenrulle.
 
 Kom løg, hvidløg og timian i gryden med baconfedt og steg det under omrøring, til løgene er bløde og klare.
 
@@ -45,12 +42,9 @@ Kog spaghetti efter anvisning på pakken. Server pastaen i dybe tallerkener med 
     </string-array>
 
 
-    <string-array
-        name="Lasagne">
-        <item
-            >Valdemarsro Lasagne</item>
-        <item
-            >2 løg, finthakket
+    <string-array name="Lasagne">
+        <item>Valdemarsro Lasagne</item>
+        <item>2 løg, finthakket
 4 fed hvidløg, finthakket
 400 g hakket oksekød
 2 tsk oregano, tørret
@@ -64,8 +58,7 @@ Kog spaghetti efter anvisning på pakken. Server pastaen i dybe tallerkener med 
 2 spsk olivenolie
 salt
 sort peber, friskkværnet</item>
-        <item
-            >Lasagnesauce
+        <item>Lasagnesauce
 Sauter løg og hvidløg i olivenolie, til de er gennemsigtige.
 
 Tilsæt kødet og brun det ved høj varme. Skru ned for varmen og tilsæt resten af ingredienserne.
