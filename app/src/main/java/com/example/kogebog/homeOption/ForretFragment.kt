@@ -8,13 +8,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.ListFragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.example.dicerally.R
 import com.example.dicerally.databinding.FragmentForretBinding
 import com.example.kogebog.contents.IndholdForretter
 import com.example.kogebog.dataBase.Food
 import com.example.kogebog.dataBase.FoodViewModel
+import com.example.kogebog.favouriteOption.FavouritesFragment
 import kotlinx.android.synthetic.main.fragment_forret.*
 
 class ForretFragment : Fragment() {
@@ -24,10 +27,7 @@ class ForretFragment : Fragment() {
     private lateinit var mFoodViewModel: FoodViewModel
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentForretBinding.inflate(inflater, container, false)
         mFoodViewModel = ViewModelProvider(this).get(FoodViewModel::class.java)
@@ -95,7 +95,13 @@ class ForretFragment : Fragment() {
 
         binding.heart.setOnClickListener{
             insertDataToDatabase()
+            var fManager = requireActivity().supportFragmentManager
+            var tx = fManager.beginTransaction()
 
+
+            tx.replace(R.id.fl_wrapper, ListFragment())
+            tx.addToBackStack(null)
+            tx.commit()
         }
 
 
@@ -103,10 +109,6 @@ class ForretFragment : Fragment() {
         return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
     private fun insertDataToDatabase() {
         val mTitel = titel_opskrift.text.toString()

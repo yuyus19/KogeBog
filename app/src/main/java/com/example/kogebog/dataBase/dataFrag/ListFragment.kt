@@ -33,9 +33,7 @@ class ListFragment : Fragment() {
 
         // UserViewModel
         mFoodViewModel = ViewModelProvider(this).get(FoodViewModel::class.java)
-        mFoodViewModel.readAllData.observe(viewLifecycleOwner, Observer { food ->
-            adapter.setData(food)
-        })
+        mFoodViewModel.readAllData.observe(viewLifecycleOwner,{ food -> adapter.setData(food)})
 
 
         // Add menu
