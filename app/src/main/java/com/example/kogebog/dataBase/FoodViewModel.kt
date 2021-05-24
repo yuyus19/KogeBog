@@ -38,5 +38,10 @@ class FoodViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAllFood()
         }
+
+            } fun isFood(FoodTitle: String){
+                viewModelScope.launch(Dispatchers.IO) {
+                    repository.isFood(FoodTitle)
+        }
     }
 }

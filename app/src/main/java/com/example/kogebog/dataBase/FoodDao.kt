@@ -2,6 +2,7 @@ package com.example.kogebog.dataBase
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 
 
 @Dao
@@ -21,6 +22,11 @@ interface FoodDao {
 
     @Query("DELETE FROM food_table")
     suspend fun deleteAllFood()
+
+    @Query( "SELECT EXISTS(SELECT 1 FROM food_table WHERE  food_titel= :FoodTitle LIMIT 1)")
+    fun isFood(FoodTitle: String) :Boolean
+
+
 
 
 }

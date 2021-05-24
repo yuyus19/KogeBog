@@ -96,9 +96,10 @@ class ForretFragment : Fragment() {
 
 
         binding.heart.setOnClickListener {
-            insertDataToDatabase()
-            heart.context
-            isHeartGone(heart, true)
+            val mTitel = titel_opskrift.text.toString()
+            val bo: Unit =mFoodViewModel.isFood(mTitel.toString())
+
+            Toast.makeText(requireContext(), bo.toString(), Toast.LENGTH_LONG).show()
 
         }
 

@@ -1,6 +1,7 @@
 package com.example.kogebog.dataBase
 
 import android.os.Parcelable
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
@@ -10,7 +11,8 @@ import kotlinx.android.parcel.Parcelize
 data class Food(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val titel: String,
+    @ColumnInfo(name="food_titel") val FoodTitle: String,
     val ingredients: String,
-    val procedure: String
+    val procedure: String,
+
 ): Parcelable

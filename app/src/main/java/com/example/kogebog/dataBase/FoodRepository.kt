@@ -22,5 +22,7 @@ class FoodRepository(private val foodDao: FoodDao) {
     suspend fun deleteAllFood(){
         foodDao.deleteAllFood()
     }
-
+    fun isFood(FoodTitle: String){
+        foodDao.isFood(FoodTitle)
+    }
 }
