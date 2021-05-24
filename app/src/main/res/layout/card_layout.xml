@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,22 +19,15 @@
         android:padding="16dp"
         >
 
-        <ImageView
-            android:id="@+id/item_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/item_title"
+            android:id="@+id/titel_txt"
             android:layout_width="236dp"
             android:layout_height="39dp"
             android:layout_margin="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="32dp"
             android:textSize="30sp"
-            app:layout_constraintLeft_toRightOf="@+id/item_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 

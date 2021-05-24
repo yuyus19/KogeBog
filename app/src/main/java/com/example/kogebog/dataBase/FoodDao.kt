@@ -14,8 +14,9 @@ interface FoodDao {
     @Query("SELECT * FROM food_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Food>>
 
-    @Update
-    suspend fun updateFood(food: Food)
+    @Query( "SELECT EXISTS(SELECT 1 FROM food_table WHERE  food_titel= :FoodTitle LIMIT 1)")
+    suspend fun isFood(FoodTitle: String): Boolean
+
 
     @Delete
     suspend fun deleteFood(food: Food)
@@ -23,8 +24,7 @@ interface FoodDao {
     @Query("DELETE FROM food_table")
     suspend fun deleteAllFood()
 
-    @Query( "SELECT EXISTS(SELECT 1 FROM food_table WHERE  food_titel= :FoodTitle LIMIT 1)")
-    fun isFood(FoodTitle: String) :Boolean
+
 
 
 

@@ -2,6 +2,7 @@ package com.example.kogebog.homeOption
 
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,15 +13,19 @@ import com.bumptech.glide.Glide
 import com.example.dicerally.databinding.FragmentForretBinding
 import com.example.kogebog.contents.IndholdForretter
 import com.example.kogebog.dataBase.Food
+import com.example.kogebog.dataBase.FoodDao
+import com.example.kogebog.dataBase.FoodRepository
 import com.example.kogebog.dataBase.FoodViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_forret.*
+
 
 class ForretFragment : Fragment() {
 
     private var _binding: FragmentForretBinding? = null
     private val binding get() = _binding!!
     private lateinit var mFoodViewModel: FoodViewModel
+
 
 
     override fun onCreateView(
@@ -96,10 +101,11 @@ class ForretFragment : Fragment() {
 
 
         binding.heart.setOnClickListener {
-            val mTitel = titel_opskrift.text.toString()
-            val bo: Unit =mFoodViewModel.isFood(mTitel.toString())
-
-            Toast.makeText(requireContext(), bo.toString(), Toast.LENGTH_LONG).show()
+            var mTitel = titel_opskrift.text.toString()
+            var buff = foodie(mTitel)
+            insertDataToDatabase()
+            Toast.makeText(requireContext(), buff.toString(), Toast.LENGTH_LONG).show()
+            Log.i("heartknap", "this was activated in runtime")
 
         }
 
@@ -124,7 +130,7 @@ class ForretFragment : Fragment() {
             )
             // Add Data to Database
             mFoodViewModel.addFood(food)
-            Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
+
 
         } else {
             Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG)
@@ -145,5 +151,9 @@ class ForretFragment : Fragment() {
             mManual
         ))
     }
+fun foodie(FoodTitle : String) : Boolean{
+    Log.i("foodie", "this was activated in runtime")
+return mFoodViewModel.isFood(FoodTitle)
+}
 
 }

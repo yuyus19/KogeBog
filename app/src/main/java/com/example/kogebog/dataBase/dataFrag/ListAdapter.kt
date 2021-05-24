@@ -25,17 +25,11 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = foodList[position]
-        holder.itemView.id_txt.text=currentItem.id.toString()
         holder.itemView.titel_txt.text = currentItem.FoodTitle
 
         holder.itemView.rowLayout.setOnClickListener {
 
-            var fManager =(holder.itemView.context as FragmentActivity).supportFragmentManager
-            var tx = fManager.beginTransaction()
 
-
-            tx.replace(R.id.fl_wrapper, ForretFragment())
-            tx.commit()
 
         }
 
