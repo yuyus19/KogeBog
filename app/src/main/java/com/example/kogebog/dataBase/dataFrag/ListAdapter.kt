@@ -6,13 +6,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dicerally.R
+import com.example.dicerally.databinding.FragmentDrinksBinding
+import com.example.dicerally.databinding.FragmentListBinding
 import com.example.kogebog.dataBase.Food
 import com.example.kogebog.homeOption.ForretFragment
 import kotlinx.android.synthetic.main.custom_row.view.*
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     private var foodList = emptyList<Food>()
-
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
