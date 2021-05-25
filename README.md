@@ -1,6 +1,6 @@
 # KogeBog
 
-Andriod programming
+Android programming
 
 
 
@@ -39,13 +39,13 @@ Andriod programming
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a a part of the android course in SDU. We have created an simple recipe app using andriod studio as part of the course requirments. 
+This project is a a part of the android course in SDU. We have created a simple recipe app using android studio as part of the course requirments. 
 
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [AndriodStudio](https://developer.android.com/studio)
+Here are a few examples.
+* [AndroidStudio](https://developer.android.com/studio)
 
 
 <!-- GETTING STARTED -->
@@ -56,7 +56,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-A decent PC 
+A decent computer 
 
 ### Installation
 
