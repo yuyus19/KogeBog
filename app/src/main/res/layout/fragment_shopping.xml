@@ -13,7 +13,7 @@
         android:padding="10dp"
         android:text="Shopping list"
         android:textColor="@color/black"
-        android:textSize="26dp"
+        android:textSize="26sp"
         />
     <EditText
         android:layout_below="@id/textView"
@@ -36,19 +36,22 @@
             android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"/>
+            android:text="@string/add"
+            style="?android:attr/buttonBarButtonStyle" />
         <Button
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"
-            android:layout_marginLeft="80dp"/>
+            android:text="@string/delete"
+            android:layout_marginStart="70dp"
+            style="?android:attr/buttonBarButtonStyle" />
         <Button
             android:id="@+id/clear"
-            android:layout_width="104dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="Clear" />
+            android:layout_marginStart="10dp"
+            android:text="@string/clear"
+            style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
 
     <TextView
@@ -58,8 +61,8 @@
         android:gravity="center"
         android:padding="10dp"
         android:layout_below="@id/linearLayout1"
-        android:text="My shopping list"
-        android:textSize="20dp"
+        android:text="@string/my_shopping_list"
+        android:textSize="20sp"
         android:textColor="@color/black"
         />
 

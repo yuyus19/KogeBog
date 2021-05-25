@@ -11,6 +11,10 @@
     <string name="Hovedret">Hovedret</string>
     <string name="Forret">Forret</string>
     <string name="lasagne">Lasagne</string>
+    <string name="my_shopping_list">My shopping list</string>
+    <string name="clear">Clear</string>
+    <string name="delete">Delete</string>
+    <string name="add">Add</string>
 
 
 </resources>
