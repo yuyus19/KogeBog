@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:id="@+id/titel_txt"
             android:layout_gravity="center"
-            android:text="John"
+            android:text="@string/recyclerview"
             android:textColor="@color/white"
             android:textSize="12sp"/>
 

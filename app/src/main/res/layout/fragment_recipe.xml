@@ -16,26 +16,26 @@
             android:id="@+id/theforret"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Forretter"
+            android:text="@string/forretter"
             />
 
         <Button
             android:id="@+id/hoved"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="HovedRetter" />
+            android:text="@string/hovedretter" />
 
         <Button
             android:id="@+id/dessert"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Dessert" />
+            android:text="@string/dessert" />
 
         <Button
             android:id="@+id/drinks"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="Drinks" />
+            android:text="@string/drinks" />
     </LinearLayout>
 </FrameLayout>
 

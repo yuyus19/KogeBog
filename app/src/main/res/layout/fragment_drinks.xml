@@ -24,7 +24,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Jordbær smoothie" />
+            android:text="@string/jordb_r_smoothie" />
 
         <Button
             android:id="@+id/button2"
@@ -32,7 +32,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Cappuchino"/>
+            android:text="@string/cappuchino"/>
 
         <Button
             android:id="@+id/button3"
@@ -48,7 +48,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Strawberry daiquiri"/>
+            android:text="@string/strawberry_daiquiri"/>
 
         <Button
             android:id="@+id/button5"
@@ -56,7 +56,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Gin Hass"/>
+            android:text="@string/gin_hass"/>
 
 
 
@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:name="com.example.SelectAnItemFragment"
         android:orientation="vertical">
 
@@ -90,36 +90,33 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:paddingBottom="20dp"
-                    android:textSize="35dp" />
+                    android:textSize="35sp" />
 
                 <ImageButton
                     android:id="@+id/heart"
                     android:layout_width="88dp"
                     android:layout_height="83dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_toRightOf="@+id/titel_opskrift"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/titel_opskrift"
                     android:background="@color/cardview_light_background"
-                    android:src="@drawable/favorite_size40dp" />
+                    android:src="@drawable/favorite_size40dp"/>
 
                 <ImageView
                     android:id="@+id/mainCorse1Image"
                     android:layout_width="400dp"
                     android:layout_height="180dp"
                     android:layout_below="@+id/titel_opskrift"
-                    android:layout_centerHorizontal="true"
-                    />
-
-
+                    android:layout_centerHorizontal="true"/>
 
                 <TextView
                     android:id="@+id/ingredienser_static"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Indgredienser"
+                    android:text="@string/indgredienser"
                     android:layout_below="@+id/mainCorse1Image"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     />
                 <TextView
                     android:id="@+id/ingredients_opskrift"
@@ -134,19 +131,14 @@
                     android:layout_height="match_parent"
                     android:layout_below="@id/ingredients_opskrift"
                     android:layout_marginTop="10dp"
-                    android:text="Fremgangsmåde"
-                    android:textSize="16dp"
+                    android:text="@string/fremgangsm_de"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:id="@+id/manual"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/fremgangsmåde_static"/>
-
-
-
-
-
             </RelativeLayout>
         </ScrollView>
     </LinearLayout>

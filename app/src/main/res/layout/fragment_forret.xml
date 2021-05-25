@@ -24,7 +24,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Røget laks med agurkecreme" />
+            android:text="@string/r_get_laks_med_agurkecreme" />
 
         <Button
             android:id="@+id/button2"
@@ -32,7 +32,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Bruchetta med tomat og basilikum"/>
+            android:text="@string/bruchetta_med_tomat_og_basilikum"/>
 
         <Button
             android:id="@+id/button3"
@@ -40,7 +40,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Kartorffel suppe"/>
+            android:text="@string/kartorffel_suppe"/>
 
         <Button
             android:id="@+id/button4"
@@ -48,7 +48,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Tun salat"/>
+            android:text="@string/tun_salat"/>
 
         <Button
             android:id="@+id/button5"
@@ -56,7 +56,7 @@
             android:layout_height="90dp"
             android:singleLine="false"
             android:textSize="14sp"
-            android:text="Tarteletter"/>
+            android:text="@string/tarteletter"/>
 
 
 
@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:name="com.example.SelectAnItemFragment"
         android:orientation="vertical">
 
@@ -84,7 +84,8 @@
                 android:addStatesFromChildren="false"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:padding="25dp">
+                android:padding="25dp"
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/titel_opskrift"
@@ -92,14 +93,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:paddingBottom="20dp"
-                    android:textSize="35dp" />
+                    android:textSize="35sp" />
 
                 <ImageButton
                     android:id="@+id/heart"
                     android:layout_width="88dp"
                     android:layout_height="83dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_toRightOf="@+id/titel_opskrift"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/titel_opskrift"
                     android:background="@color/cardview_light_background"
                     android:src="@drawable/favorite_size40dp" />
 
@@ -117,8 +118,8 @@
                     android:layout_height="match_parent"
                     android:layout_below="@+id/mainCorse1Image"
                     android:layout_marginTop="10dp"
-                    android:text="Indgredienser"
-                    android:textSize="16dp"
+                    android:text="@string/indgredienser"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -133,8 +134,8 @@
                     android:layout_height="match_parent"
                     android:layout_below="@id/ingredients_opskrift"
                     android:layout_marginTop="10dp"
-                    android:text="Fremgangsmåde"
-                    android:textSize="16dp"
+                    android:text="@string/fremgangsm_de"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView

@@ -21,13 +21,13 @@ class ShoppingFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentShoppingBinding.inflate(inflater, container, false)
 
         // Initializing the array list and the adapter
-        var itemlist = arrayListOf<String>()
-        var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_multiple_choice, itemlist)
+        val itemlist = arrayListOf<String>()
+        val adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_multiple_choice, itemlist)
 
         // When button Add is clicked a toast is displayed and text from editText is put into itemList
         // The adapter is noticed and editText gets cleared ready for new input.
@@ -48,7 +48,7 @@ class ShoppingFragment : Fragment() {
             while (item >= 0) {
                 if (position.get(item))
                 {
-                    adapter.remove(itemlist.get(item))
+                    adapter.remove(itemlist[item])
                 }
                 item--
             }

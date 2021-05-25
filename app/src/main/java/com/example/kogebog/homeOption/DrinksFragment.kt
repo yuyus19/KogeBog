@@ -16,6 +16,7 @@ import com.example.kogebog.dataBase.FoodViewModel
 import kotlinx.android.synthetic.main.fragment_forret.*
 
 
+@Suppress("NAME_SHADOWING")
 class DrinksFragment : Fragment() {
 
     private lateinit var mFoodViewModel: FoodViewModel
@@ -26,25 +27,25 @@ class DrinksFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
 
         _binding = FragmentDrinksBinding.inflate(inflater, container, false)
         mFoodViewModel = ViewModelProvider(this).get(FoodViewModel::class.java)
         val starters = IndholdDrinks
 
         // Defult values first the recipe
-        binding.titelOpskrift.setText(starters.title?.get(0))
-        binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
-        binding.manual.setText(starters.procedure?.get(0))
+        binding.titelOpskrift.text = starters.title[0]
+        binding.ingredientsOpskrift.text = starters.ingredients[0]
+        binding.manual.text = starters.procedure[0]
         val imageURL = "https://www.valdemarsro.dk/wp-content/2008/03/jordbaersmoothie.jpg"
         Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
 
         // When button is clicked the data for the first recipes get put in to the layout.
         binding.button1.setOnClickListener {
 
-            binding.titelOpskrift.setText(starters.title?.get(0))
-            binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
-            binding.manual.setText(starters.procedure?.get(0))
+            binding.titelOpskrift.text = starters.title[0]
+            binding.ingredientsOpskrift.text = starters.ingredients[0]
+            binding.manual.text = starters.procedure[0]
 
             // Gets an image from the web to use in the imageview
             val imageURL = "https://www.valdemarsro.dk/wp-content/2008/03/jordbaersmoothie.jpg"
@@ -54,9 +55,9 @@ class DrinksFragment : Fragment() {
         // When button is clicked the data for the second recipes get put in to the layout.
         binding.button2.setOnClickListener {
 
-            binding.titelOpskrift.setText(starters.title?.get(1))
-            binding.ingredientsOpskrift.setText(starters.ingredients?.get(1))
-            binding.manual.setText(starters.procedure?.get(1))
+            binding.titelOpskrift.text = starters.title[1]
+            binding.ingredientsOpskrift.text = starters.ingredients[1]
+            binding.manual.text = starters.procedure[1]
 
             // Gets an image from the web to use in the imageview
             val imageURL = "https://kaffeteriet.dk/wp-content/uploads/2021/02/cappuccino.jpg"
@@ -66,9 +67,9 @@ class DrinksFragment : Fragment() {
         // When button is clicked the data for the third recipes get put in to the layout.
         binding.button3.setOnClickListener {
 
-            binding.titelOpskrift.setText(starters.title?.get(2))
-            binding.ingredientsOpskrift.setText(starters.ingredients?.get(2))
-            binding.manual.setText(starters.procedure?.get(2))
+            binding.titelOpskrift.text = starters.title[2]
+            binding.ingredientsOpskrift.text = starters.ingredients[2]
+            binding.manual.text = starters.procedure[2]
 
             // Gets an image from the web to use in the imageview
             val imageURL = "https://www.valdemarsro.dk/wp-content/2011/05/iskaffe-1.jpg"
@@ -78,9 +79,9 @@ class DrinksFragment : Fragment() {
         // When button is clicked the data for the fourth recipes get put in to the layout.
         binding.button4.setOnClickListener {
 
-            binding.titelOpskrift.setText(starters.title?.get(3))
-            binding.ingredientsOpskrift.setText(starters.ingredients?.get(3))
-            binding.manual.setText(starters.procedure?.get(3))
+            binding.titelOpskrift.text = starters.title[3]
+            binding.ingredientsOpskrift.text = starters.ingredients[3]
+            binding.manual.text = starters.procedure[3]
 
             // Gets an image from the web to use in the imageview
             val imageURL =
@@ -91,9 +92,9 @@ class DrinksFragment : Fragment() {
         // When button is clicked the data for the fifth recipes get put in to the layout.
         binding.button5.setOnClickListener {
 
-            binding.titelOpskrift.setText(starters.title?.get(4))
-            binding.ingredientsOpskrift.setText(starters.ingredients?.get(4))
-            binding.manual.setText(starters.procedure?.get(4))
+            binding.titelOpskrift.text = starters.title[4]
+            binding.ingredientsOpskrift.text = starters.ingredients[4]
+            binding.manual.text = starters.procedure[4]
 
             // Gets an image from the web to use in the imageview
             val imageURL = "https://www.valdemarsro.dk/wp-content/2019/09/gin-hass-1.jpg"
@@ -104,10 +105,7 @@ class DrinksFragment : Fragment() {
         binding.heart.setOnClickListener {
             insertDataToDatabase()
         }
-
-
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onDestroyView() {

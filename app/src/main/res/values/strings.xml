@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Dice Rally</string>
-    <string name="halo">Halo</string>
-    <string name="hello_bitches">Hello Bitches</string>
     <string name="home">Hjem</string>
     <string name="favorite">Favorit</string>
     <string name="shopping">Shoppingliste</string>
@@ -15,6 +13,38 @@
     <string name="clear">Clear</string>
     <string name="delete">Delete</string>
     <string name="add">Add</string>
+    <string name="shoppingliste">Shoppingliste</string>
+    <string name="slet">Slet</string>
+    <string name="recyclerview">recyclerView</string>
+    <string name="hjemmelavet_salt_karamel_is">Hjemmelavet salt karamel is</string>
+    <string name="creme_brulee">Creme brulee</string>
+    <string name="pandekager">Pandekager</string>
+    <string name="grillede_bananer_med_m_rk_rom">Grillede bananer med mørk rom</string>
+    <string name="jordb_rtriflir">Jordbærtriflir</string>
+    <string name="indgredienser">Indgredienser</string>
+    <string name="fremgangsm_de">Fremgangsmåde</string>
+    <string name="jordb_r_smoothie">Jordbær smoothie</string>
+    <string name="cappuchino">Cappuchino</string>
+    <string name="strawberry_daiquiri">Strawberry daiquiri</string>
+    <string name="gin_hass">Gin Hass</string>
+    <string name="r_get_laks_med_agurkecreme">Røget laks med agurkecreme</string>
+    <string name="bruchetta_med_tomat_og_basilikum">Bruchetta med tomat og basilikum</string>
+    <string name="kartorffel_suppe">Kartorffel suppe</string>
+    <string name="tun_salat">Tun salat</string>
+    <string name="tarteletter">Tarteletter</string>
+    <string name="spaghetti_bolognese">Spaghetti Bolognese</string>
+    <string name="stegt_fl_sk_med_persillesovs">Stegt flæsk med persillesovs</string>
+    <string name="hjemmelavet_burgere">Hjemmelavet burgere</string>
+    <string name="fyldt_m_rbrad_med_cremet_gr_nk_l_og_hasseln_dder">Fyldt mørbrad med cremet grønkål og hasselnødder</string>
+    <string name="delete_all">Delete all</string>
+    <string name="forretter">Forretter</string>
+    <string name="hovedretter">HovedRetter</string>
+    <string name="dessert">Dessert</string>
+    <string name="drinks">Drinks</string>
+    <string name="tilf_jer_en_vare">Tilføjer en vare</string>
+    <string name="tilf_jer">Tilføjer</string>
+    <string name="slet_alt">Slet Alt</string>
+    <string name="min_shoppingliste">Min shoppingliste</string>
 
 
 </resources>

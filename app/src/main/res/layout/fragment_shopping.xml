@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Shoppingliste"
+        android:text="@string/shoppingliste"
         android:textColor="@color/black"
-        android:textSize="26dp"
+        android:textSize="26sp"
         />
     <EditText
         android:layout_below="@id/textView"
@@ -21,7 +21,7 @@
         android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tilføjer en vare"
+        android:hint="@string/tilf_jer_en_vare"
         android:textColorHint="@color/black"
         android:textColor="@color/black"/>
     <LinearLayout
@@ -36,19 +36,20 @@
             android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tilføjer"/>
+            android:text="@string/tilf_jer"/>
         <Button
             android:id="@+id/delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Slet"
-            android:layout_marginLeft="80dp"/>
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="@string/slet"
+            android:layout_marginStart="50dp"/>
+
         <Button
             android:id="@+id/clear"
-            android:layout_width="104dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="Slet Alt" />
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/slet_alt" />
     </LinearLayout>
 
     <TextView
@@ -58,8 +59,8 @@
         android:gravity="center"
         android:padding="10dp"
         android:layout_below="@id/linearLayout1"
-        android:text="Min shoppingliste"
-        android:textSize="20dp"
+        android:text="@string/min_shoppingliste"
+        android:textSize="20sp"
         android:textColor="@color/black"
         />
 
