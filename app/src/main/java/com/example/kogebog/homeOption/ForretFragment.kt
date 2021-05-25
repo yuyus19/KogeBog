@@ -112,12 +112,7 @@ class ForretFragment : Fragment() {
 
         // Use the method insertDataToDatabase when the button is clicked
         binding.heart.setOnClickListener {
-            var mTitel = titel_opskrift.text.toString()
-            var buff = foodie(mTitel)
             insertDataToDatabase()
-            Toast.makeText(requireContext(), buff.toString(), Toast.LENGTH_LONG).show()
-            Log.i("heartknap", "this was activated in runtime")
-
         }
 
 
@@ -166,7 +161,7 @@ class ForretFragment : Fragment() {
         ))
     }
 
-    //Try aviod duplicates not used
+    /**Try avoiding duplicates not used **/
     fun foodie(FoodTitle: String): Boolean {
         Log.i("foodie", "this was activated in runtime")
         return mFoodViewModel.isFood(FoodTitle)

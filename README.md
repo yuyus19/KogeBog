@@ -1,6 +1,6 @@
 # KogeBog
 
-Android programming
+## Android programming
 
 
 
@@ -76,7 +76,33 @@ A decent computer
 
 If you feel hungry and don't know what to cook for dinner, maybe this app will help you. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+There are plenty of recipes waiting for you. 
+
+![billede](https://user-images.githubusercontent.com/56111176/119547955-0285cf80-bd96-11eb-910a-1c2c3ac049af.png)
+
+Including some nice cakes.
+
+![billede](https://user-images.githubusercontent.com/56111176/119548078-21846180-bd96-11eb-9a7b-c4f89ba0da18.png)
+![billede](https://user-images.githubusercontent.com/56111176/119548291-598ba480-bd96-11eb-87af-88580b7ca431.png)
+
+
+The app comes with a nice shopping list feature.
+
+![billede](https://user-images.githubusercontent.com/56111176/119548117-2c3ef680-bd96-11eb-8dbe-5e95374e937d.png)
+
+You save your favorites for an easy access later on.
+
+![billede](https://user-images.githubusercontent.com/56111176/119548162-36f98b80-bd96-11eb-8e66-814915887ff3.png)
+
+
+
+
+
+
+
+_For more examples, please refer to the [Documentation](https://www.youtube.com/watch?v=5ngNuuPpmj8)_
 
 
 

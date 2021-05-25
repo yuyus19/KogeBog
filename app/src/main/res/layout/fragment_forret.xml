@@ -94,18 +94,14 @@
                     android:paddingBottom="20dp"
                     android:textSize="35dp" />
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <ImageButton
                     android:id="@+id/heart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="88dp"
+                    android:layout_height="83dp"
                     android:layout_alignParentRight="true"
-                    android:layout_marginLeft="27dp"
-                    android:layout_marginRight="18dp"
                     android:layout_toRightOf="@+id/titel_opskrift"
                     android:background="@color/cardview_light_background"
-                    android:src="@drawable/favorite_size40dp"
-                    app:backgroundTint="#F60303"
-                    app:rippleColor="#FF0000" />
+                    android:src="@drawable/favorite_size40dp" />
 
                 <ImageView
                     android:id="@+id/mainCorse1Image"
