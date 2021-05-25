@@ -76,29 +76,29 @@ A decent computer
 
 If you feel hungry and don't know what to cook for dinner, maybe this app will help you. 
 
-![billede](https://user-images.githubusercontent.com/56111176/119540064-44f6de80-bd8d-11eb-948f-f85eb4ce489b.png)\
+![billede](https://user-images.githubusercontent.com/56111176/119540064-44f6de80-bd8d-11eb-948f-f85eb4ce489b.png)
 
-There are plenty of recipes waiting for you.\ 
+There are plenty of recipes waiting for you. 
 
-![billede](https://user-images.githubusercontent.com/56111176/119540231-84252f80-bd8d-11eb-9a59-dffe90ae5171.png) \ 
+![billede](https://user-images.githubusercontent.com/56111176/119540231-84252f80-bd8d-11eb-9a59-dffe90ae5171.png)  
 
-Including some nice cakes.\
+Including some nice cakes.
 
-The app comes with a nice shopping list feature. \
+The app comes with a nice shopping list feature.
 
-![billede](https://user-images.githubusercontent.com/56111176/119540553-d9614100-bd8d-11eb-9604-18e67a956916.png)\ 
+![billede](https://user-images.githubusercontent.com/56111176/119540553-d9614100-bd8d-11eb-9604-18e67a956916.png)
 
-You save your favorites for an easy access later on. \
+You save your favorites for an easy access later on.
 
-![billede](https://user-images.githubusercontent.com/56111176/119540648-f269f200-bd8d-11eb-981a-7ef56ed61af7.png) \
-
-
+![billede](https://user-images.githubusercontent.com/56111176/119540648-f269f200-bd8d-11eb-981a-7ef56ed61af7.png)
 
 
 
 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+_For more examples, please refer to the [Documentation](https://www.youtube.com/watch?v=5ngNuuPpmj8)_
 
 
 
