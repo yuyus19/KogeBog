@@ -19,75 +19,86 @@ class DessertFragment : Fragment() {
 
     private lateinit var mFoodViewModel: FoodViewModel
     private var _binding: FragmentDessertBinding?=null
-    // This property is only valid between onCreateView and
-// onDestroyView.
-    private val binding get() = _binding!!
+    private val binding get() = _binding!!  // This property is only valid between onCreateView and onDestroyView.
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         _binding = FragmentDessertBinding.inflate(inflater, container, false)
         mFoodViewModel = ViewModelProvider(this).get(FoodViewModel::class.java)
         val starters= IndholdDessert
+
+        // Defult values first the recipe
         binding.titelOpskrift.setText(starters.title?.get(0))
         binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
         binding.manual.setText(starters.procedure?.get(0))
-
         val imageURL = "https://www.valdemarsro.dk/wp-content/2015/09/saltkaramelis-opskrift.jpg"
         Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
 
+        // When button is clicked the data for the first recipes get put in to the layout.
         binding.button1.setOnClickListener{
 
             binding.titelOpskrift.setText(starters.title?.get(0))
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(0))
             binding.manual.setText(starters.procedure?.get(0))
 
+            // Gets an image from the web to use in the imageview
             val imageURL = "https://www.valdemarsro.dk/wp-content/2015/09/saltkaramelis-opskrift.jpg"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
+        // When button is clicked the data for the second recipes get put in to the layout.
         binding.button2.setOnClickListener{
 
             binding.titelOpskrift.setText(starters.title?.get(1))
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(1))
             binding.manual.setText(starters.procedure?.get(1))
 
+            // Gets an image from the web to use in the imageview
             val imageURL = "https://www.valdemarsro.dk/wp-content/2016/09/creme-brulee.jpg"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
-
+        // When button is clicked the data for the third recipes get put in to the layout.
         binding.button3.setOnClickListener{
 
             binding.titelOpskrift.setText(starters.title?.get(2))
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(2))
             binding.manual.setText(starters.procedure?.get(2))
 
+            // Gets an image from the web to use in the imageview
             val imageURL = "https://www.valdemarsro.dk/wp-content/2007/09/pandekager1.jpg"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
+        // When button is clicked the data for the fourth recipes get put in to the layout.
         binding.button4.setOnClickListener{
 
             binding.titelOpskrift.setText(starters.title?.get(3))
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(3))
             binding.manual.setText(starters.procedure?.get(3))
 
+            // Gets an image from the web to use in the imageview
             val imageURL = "https://www.valdemarsro.dk/wp-content/2015/08/grillede-bananer_opskrift.jpg"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
 
+        // When button is clicked the data for the fifth recipes get put in to the layout.
         binding.button5.setOnClickListener{
 
             binding.titelOpskrift.setText(starters.title?.get(4))
             binding.ingredientsOpskrift.setText(starters.ingredients?.get(4))
             binding.manual.setText(starters.procedure?.get(4))
 
+            // Gets an image from the web to use in the imageview
             val imageURL = "https://www.valdemarsro.dk/wp-content/2019/05/jordbaertrifli.jpg"
             Glide.with(this).load(imageURL).into(binding.mainCorse1Image)
         }
+
         binding.heart.setOnClickListener {
             insertDataToDatabase()
         }
@@ -98,7 +109,10 @@ class DessertFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    } private fun insertDataToDatabase() {
+    }
+
+    // Use the method insertDataToDatabase when the button is clicked
+    private fun insertDataToDatabase() {
         val mTitel = titel_opskrift.text.toString()
         val mIngredients = ingredients_opskrift.text.toString()
         val mManual = manual.text.toString()
@@ -120,6 +134,7 @@ class DessertFragment : Fragment() {
         }
     }
 
+    // Method that checks it any of the values are missing
     private fun inputCheck(mTitel: String, mIngredients: String, mManual: String): Boolean{
         return !(TextUtils.isEmpty(mTitel) && TextUtils.isEmpty(mIngredients) && TextUtils.isEmpty(mManual))
     }

@@ -10,45 +10,38 @@ import com.example.kogebog.homeOption.RecipeFragment
 import com.example.kogebog.shoppingOption.ShoppingFragment
 
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
-  private lateinit var binding: ActivityMainBinding
-
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val homeFragment= RecipeFragment()
-        val favoritesFragment= ListFragment()
-        val shoppingFragment= ShoppingFragment()
-if(null==savedInstanceState){
-        makeCurrentFragment(homeFragment)}
+        val homeFragment = RecipeFragment()
+        val favoritesFragment = ListFragment()
+        val shoppingFragment = ShoppingFragment()
+        if (null == savedInstanceState) {
+            makeCurrentFragment(homeFragment)
+        }
 
-binding.bottomNavigation.setOnNavigationItemSelectedListener {
-    when(it.itemId){
-        R.id.ic_home ->makeCurrentFragment(homeFragment)
-        R.id.ic_favorite ->makeCurrentFragment(favoritesFragment)
-        R.id.ic_shop ->makeCurrentFragment(shoppingFragment)
+        // Opens the desired fragment using the method makeCurrentFragment when a button is clicked in the bottom menu.
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.ic_home -> makeCurrentFragment(homeFragment)
+                R.id.ic_favorite -> makeCurrentFragment(favoritesFragment)
+                R.id.ic_shop -> makeCurrentFragment(shoppingFragment)
+            }
+            true
+        }
     }
-    true
-}
 
-
-
-
-
-}
-
+    // A method called when replace the current fragment with the desired fragment
     private fun makeCurrentFragment(fragment: Fragment) {
-       supportFragmentManager.beginTransaction().apply {
-           replace(R.id.fl_wrapper, fragment)
-           commit()
-       }
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_wrapper, fragment)
+            commit()
+        }
     }
-
-
-
-
 }
