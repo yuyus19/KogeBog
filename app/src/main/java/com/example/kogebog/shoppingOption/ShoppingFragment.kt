@@ -32,7 +32,7 @@ class ShoppingFragment : Fragment() {
         // When button Add is clicked a toast is displayed and text from editText is put into itemList
         // The adapter is noticed and editText gets cleared ready for new input.
         binding.btnAdd.setOnClickListener {
-            Toast.makeText(context, "You have added an item", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Du har tilføjet en vare", Toast.LENGTH_LONG).show()
             itemlist.add(binding.editText.text.toString())
             binding.listView.adapter = adapter
             adapter.notifyDataSetChanged()
@@ -41,7 +41,7 @@ class ShoppingFragment : Fragment() {
 
         // When button Delete is clicked a toast is displayed and an element is removed until there is no more to remove
         binding.delete.setOnClickListener{
-            Toast.makeText(context, "You have deleted an item", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Du har slettet en vare", Toast.LENGTH_LONG).show()
             val position: SparseBooleanArray = listView.checkedItemPositions
             val count = listView.count
             var item = count - 1
@@ -58,7 +58,7 @@ class ShoppingFragment : Fragment() {
 
         // When button Clear is clicked a toast is displayed and every element in itemlist gets cleared.
         binding.clear.setOnClickListener{
-            Toast.makeText(context, "You have cleared the shopping list", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Slettet indkøbslisten", Toast.LENGTH_LONG).show()
             itemlist.clear()
             adapter.notifyDataSetChanged()
         }

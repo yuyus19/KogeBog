@@ -122,10 +122,6 @@ class HovedretFragment : Fragment() {
         return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
     // Method used to insert data into the DB
     private fun insertDataToDatabase() {
@@ -145,7 +141,7 @@ class HovedretFragment : Fragment() {
 
             // Adds Data to Database
             mFoodViewModel.addFood(food)
-            Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Tilføjet til favorit!", Toast.LENGTH_LONG).show()
 
             // Returns that not all the values are filled.
         } else {

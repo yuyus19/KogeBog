@@ -23,19 +23,15 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     override fun getItemCount(): Int {
         return foodList.size
     }
-
+    //We are assigning the variables from our database to the recycleView
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = foodList[position]
-        holder.itemView.titel_txt.text = currentItem.FoodTitle
-
-        holder.itemView.rowLayout.setOnClickListener {
-
-
-
-        }
-
+        holder.itemView.titel_opskrift.text = currentItem.FoodTitle
+        holder.itemView.ingredients_opskrift.text = currentItem.ingredients
+        holder.itemView.manual.text = currentItem.procedure
     }
 
+    //When reading from the database
     fun setData(food: List<Food>){
         this.foodList = food
         notifyDataSetChanged()

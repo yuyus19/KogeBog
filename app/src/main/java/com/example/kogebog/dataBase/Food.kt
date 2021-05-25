@@ -6,7 +6,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
-@Parcelize
+//our database table
+
 @Entity(tableName = "food_table")
 data class Food(
     @PrimaryKey(autoGenerate = true)
@@ -15,4 +16,4 @@ data class Food(
     val ingredients: String,
     val procedure: String,
 
-): Parcelable
+    )

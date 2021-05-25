@@ -19,7 +19,6 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_list, container, false)
 
         // Recyclerview
@@ -28,16 +27,14 @@ class ListFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // UserViewModel
+        //ViewModel
         mFoodViewModel = ViewModelProvider(this).get(FoodViewModel::class.java)
         mFoodViewModel.readAllData.observe(viewLifecycleOwner,{ food -> adapter.setData(food)})
 
+        //Button to delete all content in database
         view.delete_button.setOnClickListener {
             deleteAllFood()
         }
-
-
-        // Add menu
 
         return view
     }
@@ -46,17 +43,18 @@ class ListFragment : Fragment() {
 
 
     private fun deleteAllFood() {
+        //creates alertDialog
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes") { _, _ ->
             mFoodViewModel.deleteAllFood()
             Toast.makeText(
                 requireContext(),
-                "Successfully removed everything",
+                "Everything is removed",
                 Toast.LENGTH_SHORT).show()
         }
         builder.setNegativeButton("No") { _, _ -> }
-        builder.setTitle("Delete everything?")
-        builder.setMessage("Are you sure you want to delete everything?")
+        builder.setTitle("Delete favorites?")
+        builder.setMessage("Are you sure you want to delete favorites?")
         builder.create().show()
     }
 

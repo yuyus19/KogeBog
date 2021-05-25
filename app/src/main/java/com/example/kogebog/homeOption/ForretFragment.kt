@@ -133,7 +133,7 @@ class ForretFragment : Fragment() {
             )
             // Add Data to Database
             mFoodViewModel.addFood(food)
-
+            Toast.makeText(requireContext(), "Tilføjet til favorit!", Toast.LENGTH_LONG).show()
 
         } else {
             Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG)
@@ -141,14 +141,6 @@ class ForretFragment : Fragment() {
         }
     }
 
-    // Checks if the heart button is clicked, remove the button on clicked
-    fun isHeartGone(view: FloatingActionButton, isGone: Boolean?) {
-        if (isGone == null || isGone) {
-            view.hide()
-        } else {
-            view.show()
-        }
-    }
 
     // Method that checks it any of the values are missing
     private fun inputCheck(mTitel: String, mIngredients: String, mManual: String): Boolean {
@@ -157,9 +149,4 @@ class ForretFragment : Fragment() {
         ))
     }
 
-    /**Try avoiding duplicates not used **/
-    fun foodie(FoodTitle: String): Boolean {
-        Log.i("foodie", "this was activated in runtime")
-        return mFoodViewModel.isFood(FoodTitle)
-    }
 }

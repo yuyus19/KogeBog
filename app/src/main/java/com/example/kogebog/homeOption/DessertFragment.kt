@@ -108,10 +108,7 @@ class DessertFragment : Fragment() {
         return binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+
 
     // Use the method insertDataToDatabase when the button is clicked
     private fun insertDataToDatabase() {
@@ -129,7 +126,7 @@ class DessertFragment : Fragment() {
             )
             // Add Data to Database
             mFoodViewModel.addFood(food)
-            Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Tilføjet til favorit!", Toast.LENGTH_LONG).show()
 
         }else{
             Toast.makeText(requireContext(), "Please fill out all fields.", Toast.LENGTH_LONG).show()
