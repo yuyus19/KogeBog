@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Shopping list"
+        android:text="Shoppingliste"
         android:textColor="@color/black"
         android:textSize="26dp"
         />
@@ -21,7 +21,7 @@
         android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Add an item"
+        android:hint="Tilføjer en vare"
         android:textColorHint="@color/black"
         android:textColor="@color/black"/>
     <LinearLayout
@@ -36,19 +36,19 @@
             android:id="@+id/btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"/>
+            android:text="Tilføjer"/>
         <Button
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"
+            android:text="Slet"
             android:layout_marginLeft="80dp"/>
         <Button
             android:id="@+id/clear"
             android:layout_width="104dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="Clear" />
+            android:text="Slet Alt" />
     </LinearLayout>
 
     <TextView
@@ -58,7 +58,7 @@
         android:gravity="center"
         android:padding="10dp"
         android:layout_below="@id/linearLayout1"
-        android:text="My shopping list"
+        android:text="Min shoppingliste"
         android:textSize="20dp"
         android:textColor="@color/black"
         />

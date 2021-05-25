@@ -2,9 +2,9 @@
     <string name="app_name">Dice Rally</string>
     <string name="halo">Halo</string>
     <string name="hello_bitches">Hello Bitches</string>
-    <string name="home">Home</string>
-    <string name="favorite">Favorite</string>
-    <string name="shopping">Shopping</string>
+    <string name="home">Hjem</string>
+    <string name="favorite">Favorit</string>
+    <string name="shopping">Shoppingliste</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Home" />
