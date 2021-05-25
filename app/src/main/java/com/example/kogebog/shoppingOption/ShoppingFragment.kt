@@ -11,53 +11,26 @@ import androidx.fragment.app.Fragment
 import com.example.dicerally.databinding.FragmentShoppingBinding
 import kotlinx.android.synthetic.main.fragment_shopping.*
 
-//import kotlinx.android.synthetic.main.fragment_shopping.*
-
-
-
 class ShoppingFragment : Fragment() {
 
-//    private var mCallback: OnHeadlineSelectedListener? = null
-//
-//    // The container Activity must implement this interface so the frag can deliver messages
-//    interface OnHeadlineSelectedListener {
-//        /** Called by HeadlinesFragment when a list item is selected  */
-//        open fun onArticleSelected(position: Int)
-//    }
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-
-//        var listView: ListView? = null
-//        var adapter: ArrayAdapter<String>? = null
-//        var itemlist = arrayListOf<String>()
-//        listView = binding.listView
-//
-//        fun popupaleListView(){
-//        adapter = ArrayAdapter(requireActivity(),android.R.layout.simple_list_item_multiple_choice, itemlist)
-//        listView?.adapter = adapter
-//        }
-//        add.setOnClickListener{
-//            popupaleListView()
-//            Toast.makeText(context, "Something is going through", Toast.LENGTH_LONG).show()
-//        }
-
-//    }
-
     private var _binding: FragmentShoppingBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private val binding get() = _binding!! // This property is only valid between onCreateView and onDestroyView.
+
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         _binding = FragmentShoppingBinding.inflate(inflater, container, false)
-        // Initializing the array lists and the adapter
+
+        // Initializing the array list and the adapter
         var itemlist = arrayListOf<String>()
         var adapter = ArrayAdapter<String>(requireContext(), android.R.layout.simple_list_item_multiple_choice, itemlist)
 
+        // When button Add is clicked a toast is displayed and text from editText is put into itemList
+        // The adapter is noticed and editText gets cleared ready for new input.
         binding.btnAdd.setOnClickListener {
             Toast.makeText(context, "You have added an item", Toast.LENGTH_LONG).show()
             itemlist.add(binding.editText.text.toString())
@@ -65,6 +38,8 @@ class ShoppingFragment : Fragment() {
             adapter.notifyDataSetChanged()
             editText.text.clear()
         }
+
+        // When button Delete is clicked a toast is displayed and an element is removed until there is no more to remove
         binding.delete.setOnClickListener{
             Toast.makeText(context, "You have deleted an item", Toast.LENGTH_LONG).show()
             val position: SparseBooleanArray = listView.checkedItemPositions
@@ -80,16 +55,13 @@ class ShoppingFragment : Fragment() {
             position.clear()
             adapter.notifyDataSetChanged()
         }
+
+        // When button Clear is clicked a toast is displayed and every element in itemlist gets cleared.
         binding.clear.setOnClickListener{
             Toast.makeText(context, "You have cleared the shopping list", Toast.LENGTH_LONG).show()
             itemlist.clear()
             adapter.notifyDataSetChanged()
         }
             return binding.root
-        //inflater.inflate(R.layout.fragment_shopping, container, false)
         }
-    //fun onViewCreated(view:View?, savedInstanceState: Bundle?){
-    //  super.onViewCreated(view, savedInstanceState)
-
-    //}
 }
